@@ -1,0 +1,92 @@
+@mixin linear-gradient($dic, $begin, $stop) {
+  background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, $begin), color-stop(100%, $stop));
+  background: -moz-linear-gradient($dic, $begin 0%, $stop 100%);
+  background: -o-linear-gradient($dic, $begin 0%, $stop 100%);
+  background: -webkit-linear-gradient($dic, $begin 0%, $stop 100%);
+  background: linear-gradient($dic, $begin 0%, $stop 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#{$begin}, endColorstr=#{$stop})";
+  *background: rgb((red($begin)+red($stop))/2, (green($begin)+green($stop))/2, (blue($begin)+blue($stop))/2 );
+}
+
+@mixin blueBsNum($width){
+    .blueBs0 { background: url("../img/lottery/cqssc/ball_2.png") no-repeat; }
+    @for $i from 0 through 26 {
+        .blueBs#{$i+1}{
+            background-position: 0 -#{$width*$i};
+        }
+    }
+}
+
+@mixin display{
+    .display-box {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -moz-flex; 
+        display: -ms-flexbox; 
+        display: flex;
+        width: 100%; 
+    }
+};
+
+@mixin box-flex{
+    @for $i from 1 through 12 {
+        .box-flex-#{$i}{
+            -webkit-box-flex: $i;
+            -moz-box-flex: $i;
+            -ms-box-flex: $i;
+            box-flex: $i;
+            width: $i/12*100%;
+            display: block;
+        }
+    }
+}
+
+@mixin box-pack($target) {
+    -webkit-box-pack: $target;
+    -moz-box-pack: $target;
+    -o-box-pack: $target;
+    -ms-box-pack: $target;
+    box-pack: $target;
+}
+
+@mixin box-align($target) {
+    -webkit-box-align: $target;
+    -moz-box-align: $target;
+    -o-box-align: $target;
+    -ms-box-align: $target;
+    box-align: $target;
+}
+
+@mixin animation($value){
+    -webkit-animation: $value;
+    -moz-animation: $value;
+    -o-animation: $value;
+    animation: $value;
+}
+
+@mixin transform($value){
+    -webkit-transform: $value;
+    -moz-transform: $value;
+    -o-transform: $value;
+    transform: $value;
+}
+
+@mixin justify-content($value){
+    -webkit-justify-content: $value;
+    -moz-justify-content: $value;
+    -o-justify-content: $value;
+    justify-content: $value;
+}
+
+@mixin box-shadow($value){
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    -o-box-shadow: $value;
+    box-shadow: $value;
+}
+
+@mixin border-radius($value){
+    -webkit-border-radius: $value;
+    border-radius: $value;
+}

@@ -1,0 +1,53 @@
+<template>
+	<div class="page page-current" id="lottery_main">
+
+		<v-header :headTitle="headTitle" lAutoClass="icon-menu" rAutoClass="icon-me" lDPanel="#side_left" rDPanel="#side_right" @click.native="toName"></v-header>
+		
+        
+		<v-nav></v-nav>
+
+		<div class="content" style="overflow:hidden;">
+
+			<lottery-nav :headTitle="headTitle" lToPopup=".modal_lottery_type" rToPopup=".modal_lottery_sub"></lottery-nav>
+            
+            <periods-l></periods-l>
+            
+            <lottery-list></lottery-list>
+
+		</div>
+        
+        <!-- popup -->
+		<lottery-type></lottery-type>
+        <lottery-sub></lottery-sub>
+        <lottery-bet></lottery-bet>
+        <!-- ! end popup -->
+	</div>
+</template>
+
+<script>
+    import vHeader from '../../components/com/header'
+
+    import lotteryNav from '../../components/lottery/nav'
+    import periodsL from '../../components/lottery/periods'
+    import lotteryList from '../../components/lottery/lottery_list'
+
+    import lotteryType from '../../components/lottery/lottery_type'
+    import lotterySub from '../../components/lottery/lottery_sub'
+    import lotteryBet from '../../components/lottery/bet'
+
+    import vNav from '../../components/com/nav'
+	export default {
+		name:'Lotterymain',
+        components:{vHeader, lotteryNav, periodsL, lotteryList, lotteryType, lotterySub, lotteryBet, vNav},
+        data(){
+        	return {
+        		headTitle:'重庆时时彩'
+        	}
+        },
+        methods:{
+        	toName(){
+        		this.headTitle = '江西时时彩'
+        	}
+        }
+	}
+</script>

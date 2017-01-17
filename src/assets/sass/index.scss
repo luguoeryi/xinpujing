@@ -1,0 +1,46 @@
+@import "var", "mixin";
+
+/* news */
+.news {
+    div[class*=box-flex]{ overflow: hidden; }
+    .info_wrap { width: 200%; }
+    .news_info {
+        display: inline-block;
+        width: 50%;
+        height: 1.4rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.animation_float {
+    @include animation(news_float infinite 8s linear);
+}
+@keyframes news_float {
+    100% {
+        @include transform(translateX(-50%));
+    }
+}
+@-webkit-keyframes news_float {
+    100% {
+        @include transform(translateX(-50%));
+    }
+}
+/* ! end news */
+
+/* home_link */
+.home_link {
+    font-size: 0.7rem;
+    span[class*=icon]{
+        font-weight: bold;
+        font-size: 1.1rem;
+        vertical-align: sub;
+    }
+    border-top: 1px solid #ececec;
+    a {
+        margin: .5rem;
+        display: block;
+    }
+}
+/* ! end home_link */

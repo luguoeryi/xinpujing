@@ -1,0 +1,2540 @@
+/* reset sui */
+/* line 5, ../../src/sass/common.scss */
+.panel-side-nav .list-block .item-link {
+  border-top: 1px solid transparent;
+  font-size: 0.8rem;
+}
+/* line 5, ../../src/sass/common.scss */
+.panel-side-nav .list-block .item-link span.icon {
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
+
+/* line 6, ../../src/sass/common.scss */
+.panel-side-nav .list-block > ul:nth-of-type(2) {
+  margin-top: 4px;
+}
+
+/* line 7, ../../src/sass/common.scss */
+.page.theme-dark, .panel.theme-dark, .theme-dark .content, .theme-dark .login-screen-content, .theme-dark .page, .theme-dark .panel {
+  background-color: #333;
+}
+
+/* line 8, ../../src/sass/common.scss */
+.panel-side-nav .list-block {
+  margin-top: 2.2rem;
+}
+
+/* line 9, ../../src/sass/common.scss */
+.theme-dark .item-link.active-state, .theme-dark label.label-checkbox.active-state, .theme-dark label.label-radio.active-state, html:not(.watch-active-state) .theme-dark .item-link:active, html:not(.watch-active-state) .theme-dark label.label-checkbox:active, html:not(.watch-active-state) .theme-dark label.label-radio:active {
+  background-color: #333;
+}
+
+/* line 10, ../../src/sass/common.scss */
+label.label-checkbox input[type=checkbox]:checked + .item-media i.icon-form-checkbox, label.label-checkbox input[type=radio]:checked + .item-media i.icon-form-checkbox {
+  background-color: #e71516;
+}
+
+/* line 11, ../../src/sass/common.scss */
+.theme-dark .card {
+  margin: 0;
+  padding: .2rem 0;
+  background: #444;
+}
+
+/* line 13, ../../src/sass/common.scss */
+.popup-overlay {
+  z-index: 1999;
+}
+
+/* line 14, ../../src/sass/common.scss */
+.list-block input[type=text], .list-block input[type=password], .list-block input[type=email], .list-block input[type=tel], .list-block input[type=url], .list-block input[type=date], .list-block input[type=datetime-local], .list-block input[type=time], .list-block input[type=number], .list-block input[type=search], .list-block select, .list-block textarea {
+  font-size: 0.8rem;
+}
+
+/* line 15, ../../src/sass/common.scss */
+.modal_side .content {
+  font-size: 0.7rem;
+}
+/* line 15, ../../src/sass/common.scss */
+.modal_side .content .side_list {
+  padding-left: 0.8rem;
+}
+
+/* line 17, ../../src/sass/common.scss */
+.panel a {
+  color: inherit;
+}
+/* line 19, ../../src/sass/common.scss */
+.panel a:active {
+  color: #C1C1C1;
+}
+
+/* line 24, ../../src/sass/common.scss */
+.bar-tab .tab-item.active, .bar-tab .tab-item:active {
+  color: #C1C1C1;
+}
+
+/* line 27, ../../src/sass/common.scss */
+.bar .button-link {
+  color: inherit;
+}
+
+/* line 29, ../../src/sass/common.scss */
+.button-danger.button-fill {
+  background-color: #e71516;
+}
+
+/* line 32, ../../src/sass/common.scss */
+.modal_base .content-block-title {
+  margin: .5rem .75rem;
+  font-size: 0.8rem;
+}
+/* line 36, ../../src/sass/common.scss */
+.modal_base .list-block {
+  margin: 0;
+  font-size: 0.82rem;
+}
+/* line 38, ../../src/sass/common.scss */
+.modal_base .list-block .item-media .icon {
+  font-size: 80%;
+  color: #e71516;
+}
+/* line 43, ../../src/sass/common.scss */
+.modal_base .button.button-big {
+  font-size: 0.82rem;
+}
+/* line 46, ../../src/sass/common.scss */
+.modal_base .list-block .item-media + .item-inner {
+  margin-left: 0.25rem;
+}
+
+/* line 48, ../../src/sass/common.scss */
+.modal_form_li .list-block ul > li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+/* line 52, ../../src/sass/common.scss */
+.page, .page-group {
+  background: #fff;
+}
+
+/* line 55, ../../src/sass/common.scss */
+.content-padded {
+  margin: auto;
+  padding: .5rem;
+}
+
+/* line 59, ../../src/sass/common.scss */
+.page > .content {
+  background: #ececec;
+}
+/* line 61, ../../src/sass/common.scss */
+.page > .content > section {
+  background: #fff;
+}
+
+/* line 65, ../../src/sass/common.scss */
+.login-screen, .popup {
+  background: #ececec;
+}
+
+/* line 68, ../../src/sass/common.scss */
+.modal_news .list-block .item-content {
+  border-bottom: 1px dashed #C1C1C1;
+}
+
+/* line 71, ../../src/sass/common.scss */
+.bar .searchbar {
+  background: #ececec;
+}
+
+/* line 74, ../../src/sass/common.scss */
+.activity .item-link .item-inner {
+  color: inherit;
+  background: none;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+/* line 75, ../../src/sass/common.scss */
+.activity .item-link .item-inner span:nth-child(2) {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  color: #C1C1C1;
+}
+
+/* line 76, ../../src/sass/common.scss */
+small {
+  font-size: 82%;
+}
+
+/* line 77, ../../src/sass/common.scss */
+.label-switch input[type=checkbox]:checked + .checkbox {
+  background: #0894ec;
+}
+
+/* line 80, ../../src/sass/common.scss */
+.base_tabs .buttons-tab .button {
+  padding: 0.5rem 0;
+  height: 2.5rem;
+  line-height: 1.5rem;
+}
+/* line 85, ../../src/sass/common.scss */
+.base_tabs .buttons-tab .button.active {
+  color: #e71516;
+  border-color: #e71516;
+}
+
+/* line 93, ../../src/sass/common.scss */
+.modal_record .list-block, .modal_news_acement .list-block, .modal_news_game .list-block {
+  font-size: 0.75rem;
+}
+/* line 93, ../../src/sass/common.scss */
+.modal_record .list-block ul > li, .modal_news_acement .list-block ul > li, .modal_news_game .list-block ul > li {
+  padding: 0.8rem 0;
+}
+/* line 93, ../../src/sass/common.scss */
+.modal_record .list-block time, .modal_news_acement .list-block time, .modal_news_game .list-block time {
+  text-align: right;
+  padding-right: 0.75rem;
+}
+/* line 94, ../../src/sass/common.scss */
+.modal_record .list-block .item-title, .modal_news_acement .list-block .item-title, .modal_news_game .list-block .item-title {
+  width: 100%;
+}
+/* line 95, ../../src/sass/common.scss */
+.modal_record .tab .buttons-tab, .modal_news_acement .tab .buttons-tab, .modal_news_game .tab .buttons-tab {
+  font-size: 80%;
+}
+/* line 97, ../../src/sass/common.scss */
+.modal_record .tab .buttons-tab .button:nth-of-type(1), .modal_news_acement .tab .buttons-tab .button:nth-of-type(1), .modal_news_game .tab .buttons-tab .button:nth-of-type(1) {
+  margin-left: 1.5rem;
+}
+/* line 98, ../../src/sass/common.scss */
+.modal_record .tab .buttons-tab .button:nth-of-type(2), .modal_news_acement .tab .buttons-tab .button:nth-of-type(2), .modal_news_game .tab .buttons-tab .button:nth-of-type(2) {
+  margin-right: 1.5rem;
+}
+/* line 101, ../../src/sass/common.scss */
+.modal_record .tab .buttons-tab div[class*=box], .modal_news_acement .tab .buttons-tab div[class*=box], .modal_news_game .tab .buttons-tab div[class*=box] {
+  padding: 0.4rem;
+}
+/* line 103, ../../src/sass/common.scss */
+.modal_record .tab .buttons-tab div[class*=box] span.icon, .modal_news_acement .tab .buttons-tab div[class*=box] span.icon, .modal_news_game .tab .buttons-tab div[class*=box] span.icon {
+  font-size: 0.5em;
+}
+/* line 106, ../../src/sass/common.scss */
+.modal_record .tab .buttons-tab div[class*=box]:nth-of-type(2), .modal_news_acement .tab .buttons-tab div[class*=box]:nth-of-type(2), .modal_news_game .tab .buttons-tab div[class*=box]:nth-of-type(2) {
+  -moz-box-shadow: -2px 0 1px #ececec;
+  -webkit-box-shadow: -2px 0 1px #ececec;
+  box-shadow: -2px 0 1px #ececec;
+}
+
+/* ! end  reset sui */
+/* font */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../../lib/fonts/icomoon.eot?ba8uq7");
+  src: url("../../lib/fonts/icomoon.eot?ba8uq7#iefix") format("embedded-opentype"), url("../../lib/fonts/icomoon.ttf?ba8uq7") format("truetype"), url("../../lib/fonts/icomoon.woff?ba8uq7") format("woff"), url("../../lib/fonts/icomoon.svg?ba8uq7#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 13, ../../src/sass/_font.scss */
+[class^="icons-"], [class*=" icons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 28, ../../src/sass/_font.scss */
+.icons-clock:before {
+  content: "\e900";
+}
+
+/* line 31, ../../src/sass/_font.scss */
+.icons-esc:before {
+  content: "\e901";
+}
+
+/* line 34, ../../src/sass/_font.scss */
+.icons-home-outline:before {
+  content: "\e902";
+}
+
+/* line 37, ../../src/sass/_font.scss */
+.icons-calculator2:before {
+  content: "\e903";
+}
+
+/* line 40, ../../src/sass/_font.scss */
+.icons-volume-up:before {
+  content: "\e904";
+}
+
+/* line 43, ../../src/sass/_font.scss */
+.icons-info-outline:before {
+  content: "\e905";
+}
+
+/* line 46, ../../src/sass/_font.scss */
+.icons-info3:before {
+  content: "\e906";
+}
+
+/* line 49, ../../src/sass/_font.scss */
+.icons-message-typing:before {
+  content: "\e907";
+}
+
+/* line 52, ../../src/sass/_font.scss */
+.icons-live_help:before {
+  content: "\e908";
+}
+
+/* line 55, ../../src/sass/_font.scss */
+.icons-help_outline:before {
+  content: "\e909";
+}
+
+/* line 58, ../../src/sass/_font.scss */
+.icons-help2:before {
+  content: "\e90a";
+}
+
+/* line 61, ../../src/sass/_font.scss */
+.icons-phone_iphone:before {
+  content: "\e90b";
+}
+
+/* line 64, ../../src/sass/_font.scss */
+.icons-keyboard_backspace:before {
+  content: "\e90c";
+}
+
+/* line 67, ../../src/sass/_font.scss */
+.icons-arrow_back:before {
+  content: "\e90d";
+}
+
+/* line 70, ../../src/sass/_font.scss */
+.icons-home4:before {
+  content: "\e90e";
+}
+
+/* line 73, ../../src/sass/_font.scss */
+.icons-volume_up:before {
+  content: "\e90f";
+}
+
+/* line 76, ../../src/sass/_font.scss */
+.icons-info_outline:before {
+  content: "\e910";
+}
+
+/* line 79, ../../src/sass/_font.scss */
+.icons-chat_bubble:before {
+  content: "\e911";
+}
+
+/* line 82, ../../src/sass/_font.scss */
+.icons-money_off:before {
+  content: "\e912";
+}
+
+/* line 85, ../../src/sass/_font.scss */
+.icons-attach_money:before {
+  content: "\e913";
+}
+
+/* line 88, ../../src/sass/_font.scss */
+.icons-mobile:before {
+  content: "\e914";
+}
+
+/* line 91, ../../src/sass/_font.scss */
+.icons-cellular-phone:before {
+  content: "\e914";
+}
+
+/* line 94, ../../src/sass/_font.scss */
+.icons-phone:before {
+  content: "\e914";
+}
+
+/* line 97, ../../src/sass/_font.scss */
+.icons-phone2:before {
+  content: "\e915";
+}
+
+/* line 100, ../../src/sass/_font.scss */
+.icons-contact:before {
+  content: "\e915";
+}
+
+/* line 103, ../../src/sass/_font.scss */
+.icons-phone9:before {
+  content: "\e916";
+}
+
+/* line 106, ../../src/sass/_font.scss */
+.icons-contact3:before {
+  content: "\e916";
+}
+
+/* line 109, ../../src/sass/_font.scss */
+.icons-chat:before {
+  content: "\e917";
+}
+
+/* line 112, ../../src/sass/_font.scss */
+.icons-bubble:before {
+  content: "\e917";
+}
+
+/* line 115, ../../src/sass/_font.scss */
+.icons-comment:before {
+  content: "\e917";
+}
+
+/* line 118, ../../src/sass/_font.scss */
+.icons-talk:before {
+  content: "\e917";
+}
+
+/* line 121, ../../src/sass/_font.scss */
+.icons-monitor:before {
+  content: "\e918";
+}
+
+/* line 124, ../../src/sass/_font.scss */
+.icons-screen:before {
+  content: "\e918";
+}
+
+/* line 127, ../../src/sass/_font.scss */
+.icons-desktop:before {
+  content: "\e918";
+}
+
+/* line 130, ../../src/sass/_font.scss */
+.icons-pc:before {
+  content: "\e918";
+}
+
+/* line 133, ../../src/sass/_font.scss */
+.icons-calculator:before {
+  content: "\e919";
+}
+
+/* line 136, ../../src/sass/_font.scss */
+.icons-math:before {
+  content: "\e919";
+}
+
+/* line 139, ../../src/sass/_font.scss */
+.icons-arithmetic:before {
+  content: "\e919";
+}
+
+/* line 142, ../../src/sass/_font.scss */
+.icons-screen2:before {
+  content: "\e91a";
+}
+
+/* line 145, ../../src/sass/_font.scss */
+.icons-display:before {
+  content: "\e91a";
+}
+
+/* line 148, ../../src/sass/_font.scss */
+.icons-monitor2:before {
+  content: "\e91a";
+}
+
+/* line 151, ../../src/sass/_font.scss */
+.icons-pc2:before {
+  content: "\e91a";
+}
+
+/* line 154, ../../src/sass/_font.scss */
+.icons-computer:before {
+  content: "\e91a";
+}
+
+/* line 157, ../../src/sass/_font.scss */
+.icons-desktop2:before {
+  content: "\e91a";
+}
+
+/* line 160, ../../src/sass/_font.scss */
+.icons-question-mark:before {
+  content: "\e91b";
+}
+
+/* line 163, ../../src/sass/_font.scss */
+.icons-help:before {
+  content: "\e91b";
+}
+
+/* line 166, ../../src/sass/_font.scss */
+.icons-iphone:before {
+  content: "\e91c";
+}
+
+/* line 169, ../../src/sass/_font.scss */
+.icons-touch:before {
+  content: "\e91c";
+}
+
+/* line 172, ../../src/sass/_font.scss */
+.icons-phone4:before {
+  content: "\e91c";
+}
+
+/* line 175, ../../src/sass/_font.scss */
+.icons-mobile3:before {
+  content: "\e91c";
+}
+
+/* line 178, ../../src/sass/_font.scss */
+.icons-loop:before {
+  content: "\e91d";
+}
+
+/* line 181, ../../src/sass/_font.scss */
+.icons-refresh:before {
+  content: "\e91d";
+}
+
+/* line 184, ../../src/sass/_font.scss */
+.icons-reload:before {
+  content: "\e91d";
+}
+
+/* line 187, ../../src/sass/_font.scss */
+.icons-reset:before {
+  content: "\e91d";
+}
+
+/* line 190, ../../src/sass/_font.scss */
+.icons-arrows:before {
+  content: "\e91d";
+}
+
+/* line 193, ../../src/sass/_font.scss */
+.icons-reload-alt:before {
+  content: "\e91e";
+}
+
+/* line 196, ../../src/sass/_font.scss */
+.icons-refresh2:before {
+  content: "\e91e";
+}
+
+/* line 199, ../../src/sass/_font.scss */
+.icons-reset2:before {
+  content: "\e91e";
+}
+
+/* line 202, ../../src/sass/_font.scss */
+.icons-arrow:before {
+  content: "\e91e";
+}
+
+/* line 205, ../../src/sass/_font.scss */
+.icons-reload2:before {
+  content: "\e91f";
+}
+
+/* line 208, ../../src/sass/_font.scss */
+.icons-refresh3:before {
+  content: "\e91f";
+}
+
+/* line 211, ../../src/sass/_font.scss */
+.icons-reset3:before {
+  content: "\e91f";
+}
+
+/* line 214, ../../src/sass/_font.scss */
+.icons-arrow2:before {
+  content: "\e91f";
+}
+
+/* line 217, ../../src/sass/_font.scss */
+.icons-equalizer2:before {
+  content: "\e920";
+}
+
+/* line 220, ../../src/sass/_font.scss */
+.icons-settings6:before {
+  content: "\e920";
+}
+
+/* line 223, ../../src/sass/_font.scss */
+.icons-options4:before {
+  content: "\e920";
+}
+
+/* line 226, ../../src/sass/_font.scss */
+.icons-user:before {
+  content: "\e921";
+}
+
+/* line 229, ../../src/sass/_font.scss */
+.icons-profile:before {
+  content: "\e921";
+}
+
+/* line 232, ../../src/sass/_font.scss */
+.icons-account:before {
+  content: "\e921";
+}
+
+/* line 235, ../../src/sass/_font.scss */
+.icons-avatar:before {
+  content: "\e921";
+}
+
+/* line 238, ../../src/sass/_font.scss */
+.icons-keyboard3:before {
+  content: "\e922";
+}
+
+/* line 241, ../../src/sass/_font.scss */
+.icons-typing:before {
+  content: "\e922";
+}
+
+/* line 244, ../../src/sass/_font.scss */
+.icons-type2:before {
+  content: "\e922";
+}
+
+/* line 247, ../../src/sass/_font.scss */
+.icons-input:before {
+  content: "\e922";
+}
+
+/* line 250, ../../src/sass/_font.scss */
+.icons-mobile4:before {
+  content: "\e923";
+}
+
+/* line 253, ../../src/sass/_font.scss */
+.icons-phone7:before {
+  content: "\e923";
+}
+
+/* line 256, ../../src/sass/_font.scss */
+.icons-cellular:before {
+  content: "\e923";
+}
+
+/* line 259, ../../src/sass/_font.scss */
+.icons-phone6:before {
+  content: "\e924";
+}
+
+/* line 262, ../../src/sass/_font.scss */
+.icons-contact2:before {
+  content: "\e924";
+}
+
+/* line 265, ../../src/sass/_font.scss */
+.icons-comment2:before {
+  content: "\e925";
+}
+
+/* line 268, ../../src/sass/_font.scss */
+.icons-chat5:before {
+  content: "\e925";
+}
+
+/* line 271, ../../src/sass/_font.scss */
+.icons-talk5:before {
+  content: "\e925";
+}
+
+/* line 274, ../../src/sass/_font.scss */
+.icons-bubble2:before {
+  content: "\e925";
+}
+
+/* line 277, ../../src/sass/_font.scss */
+.icons-home2:before {
+  content: "\e926";
+}
+
+/* line 280, ../../src/sass/_font.scss */
+.icons-house:before {
+  content: "\e926";
+}
+
+/* line 283, ../../src/sass/_font.scss */
+.icons-wrench:before {
+  content: "\e927";
+}
+
+/* line 286, ../../src/sass/_font.scss */
+.icons-settings3:before {
+  content: "\e927";
+}
+
+/* line 289, ../../src/sass/_font.scss */
+.icons-options:before {
+  content: "\e927";
+}
+
+/* line 292, ../../src/sass/_font.scss */
+.icons-preferences2:before {
+  content: "\e927";
+}
+
+/* line 295, ../../src/sass/_font.scss */
+.icons-cog3:before {
+  content: "\e928";
+}
+
+/* line 298, ../../src/sass/_font.scss */
+.icons-gear3:before {
+  content: "\e928";
+}
+
+/* line 301, ../../src/sass/_font.scss */
+.icons-settings5:before {
+  content: "\e928";
+}
+
+/* line 304, ../../src/sass/_font.scss */
+.icons-generate:before {
+  content: "\e928";
+}
+
+/* line 307, ../../src/sass/_font.scss */
+.icons-make:before {
+  content: "\e928";
+}
+
+/* line 310, ../../src/sass/_font.scss */
+.icons-options3:before {
+  content: "\e928";
+}
+
+/* line 313, ../../src/sass/_font.scss */
+.icons-heart4:before {
+  content: "\e929";
+}
+
+/* line 316, ../../src/sass/_font.scss */
+.icons-love3:before {
+  content: "\e929";
+}
+
+/* line 319, ../../src/sass/_font.scss */
+.icons-favorite:before {
+  content: "\e929";
+}
+
+/* line 322, ../../src/sass/_font.scss */
+.icons-like3:before {
+  content: "\e929";
+}
+
+/* line 325, ../../src/sass/_font.scss */
+.icons-volume:before {
+  content: "\e92a";
+}
+
+/* line 328, ../../src/sass/_font.scss */
+.icons-media-control:before {
+  content: "\e92a";
+}
+
+/* line 331, ../../src/sass/_font.scss */
+.icons-monitor3:before {
+  content: "\e92b";
+}
+
+/* line 334, ../../src/sass/_font.scss */
+.icons-screen4:before {
+  content: "\e92b";
+}
+
+/* line 337, ../../src/sass/_font.scss */
+.icons-desktop4:before {
+  content: "\e92b";
+}
+
+/* line 340, ../../src/sass/_font.scss */
+.icons-pc4:before {
+  content: "\e92b";
+}
+
+/* line 343, ../../src/sass/_font.scss */
+.icons-user2:before {
+  content: "\e92c";
+}
+
+/* line 346, ../../src/sass/_font.scss */
+.icons-profile2:before {
+  content: "\e92c";
+}
+
+/* line 349, ../../src/sass/_font.scss */
+.icons-avatar2:before {
+  content: "\e92c";
+}
+
+/* line 352, ../../src/sass/_font.scss */
+.icons-head:before {
+  content: "\e92c";
+}
+
+/* line 355, ../../src/sass/_font.scss */
+.icons-trophy2:before {
+  content: "\e92d";
+}
+
+/* line 358, ../../src/sass/_font.scss */
+.icons-cup:before {
+  content: "\e92d";
+}
+
+/* line 361, ../../src/sass/_font.scss */
+.icons-prize:before {
+  content: "\e92d";
+}
+
+/* line 364, ../../src/sass/_font.scss */
+.icons-tournament:before {
+  content: "\e92d";
+}
+
+/* line 367, ../../src/sass/_font.scss */
+.icons-pencil:before {
+  content: "\e92e";
+}
+
+/* line 370, ../../src/sass/_font.scss */
+.icons-write:before {
+  content: "\e92e";
+}
+
+/* line 373, ../../src/sass/_font.scss */
+.icons-blog:before {
+  content: "\e92e";
+}
+
+/* line 376, ../../src/sass/_font.scss */
+.icons-save:before {
+  content: "\e92e";
+}
+
+/* line 379, ../../src/sass/_font.scss */
+.icons-note:before {
+  content: "\e92e";
+}
+
+/* line 382, ../../src/sass/_font.scss */
+.icons-credit-card2:before {
+  content: "\e92f";
+}
+
+/* line 385, ../../src/sass/_font.scss */
+.icons-card:before {
+  content: "\e92f";
+}
+
+/* line 388, ../../src/sass/_font.scss */
+.icons-question:before {
+  content: "\e930";
+}
+
+/* line 391, ../../src/sass/_font.scss */
+.icons-keyboard2:before {
+  content: "\e931";
+}
+
+/* line 394, ../../src/sass/_font.scss */
+.icons-credit-card:before {
+  content: "\e932";
+}
+
+/* line 397, ../../src/sass/_font.scss */
+.icons-home:before {
+  content: "\e933";
+}
+
+/* line 400, ../../src/sass/_font.scss */
+.icons-gear:before {
+  content: "\e934";
+}
+
+/* line 403, ../../src/sass/_font.scss */
+.icons-diff-added:before {
+  content: "\e935";
+}
+
+/* line 406, ../../src/sass/_font.scss */
+.icons-heart2:before {
+  content: "\e936";
+}
+
+/* line 409, ../../src/sass/_font.scss */
+.icons-flame2:before {
+  content: "\e937";
+}
+
+/* line 412, ../../src/sass/_font.scss */
+.icons-sign-out:before {
+  content: "\e938";
+}
+
+/* line 415, ../../src/sass/_font.scss */
+.icons-credit-card3:before {
+  content: "\e939";
+}
+
+/* line 418, ../../src/sass/_font.scss */
+.icons-phone3:before {
+  content: "\e93a";
+}
+
+/* line 421, ../../src/sass/_font.scss */
+.icons-tablet:before {
+  content: "\e93a";
+}
+
+/* line 424, ../../src/sass/_font.scss */
+.icons-mobile2:before {
+  content: "\e93a";
+}
+
+/* line 427, ../../src/sass/_font.scss */
+.icons-settings:before {
+  content: "\e93b";
+}
+
+/* line 430, ../../src/sass/_font.scss */
+.icons-cog:before {
+  content: "\e93b";
+}
+
+/* line 433, ../../src/sass/_font.scss */
+.icons-preferences:before {
+  content: "\e93b";
+}
+
+/* line 436, ../../src/sass/_font.scss */
+.icons-heart:before {
+  content: "\e93c";
+}
+
+/* line 439, ../../src/sass/_font.scss */
+.icons-love:before {
+  content: "\e93c";
+}
+
+/* line 442, ../../src/sass/_font.scss */
+.icons-like:before {
+  content: "\e93c";
+}
+
+/* line 445, ../../src/sass/_font.scss */
+.icons-fire:before {
+  content: "\e93d";
+}
+
+/* line 448, ../../src/sass/_font.scss */
+.icons-danger:before {
+  content: "\e93d";
+}
+
+/* line 451, ../../src/sass/_font.scss */
+.icons-flame:before {
+  content: "\e93d";
+}
+
+/* line 454, ../../src/sass/_font.scss */
+.icons-hot:before {
+  content: "\e93d";
+}
+
+/* line 457, ../../src/sass/_font.scss */
+.icons-news:before {
+  content: "\e93e";
+}
+
+/* line 460, ../../src/sass/_font.scss */
+.icons-paper:before {
+  content: "\e93e";
+}
+
+/* line 463, ../../src/sass/_font.scss */
+.icons-display2:before {
+  content: "\e93f";
+}
+
+/* line 466, ../../src/sass/_font.scss */
+.icons-screen3:before {
+  content: "\e93f";
+}
+
+/* line 469, ../../src/sass/_font.scss */
+.icons-pc3:before {
+  content: "\e93f";
+}
+
+/* line 472, ../../src/sass/_font.scss */
+.icons-computer2:before {
+  content: "\e93f";
+}
+
+/* line 475, ../../src/sass/_font.scss */
+.icons-desktop3:before {
+  content: "\e93f";
+}
+
+/* line 478, ../../src/sass/_font.scss */
+.icons-chat2:before {
+  content: "\e940";
+}
+
+/* line 481, ../../src/sass/_font.scss */
+.icons-bubbles:before {
+  content: "\e940";
+}
+
+/* line 484, ../../src/sass/_font.scss */
+.icons-talk2:before {
+  content: "\e940";
+}
+
+/* line 487, ../../src/sass/_font.scss */
+.icons-message:before {
+  content: "\e940";
+}
+
+/* line 490, ../../src/sass/_font.scss */
+.icons-conversation:before {
+  content: "\e940";
+}
+
+/* line 493, ../../src/sass/_font.scss */
+.icons-hotairballoon:before {
+  content: "\e941";
+}
+
+/* line 496, ../../src/sass/_font.scss */
+.icons-balloon:before {
+  content: "\e941";
+}
+
+/* line 499, ../../src/sass/_font.scss */
+.icons-flight:before {
+  content: "\e941";
+}
+
+/* line 502, ../../src/sass/_font.scss */
+.icons-air:before {
+  content: "\e941";
+}
+
+/* line 505, ../../src/sass/_font.scss */
+.icons-document:before {
+  content: "\e942";
+}
+
+/* line 508, ../../src/sass/_font.scss */
+.icons-file:before {
+  content: "\e942";
+}
+
+/* line 511, ../../src/sass/_font.scss */
+.icons-paper2:before {
+  content: "\e942";
+}
+
+/* line 514, ../../src/sass/_font.scss */
+.icons-text:before {
+  content: "\e942";
+}
+
+/* line 517, ../../src/sass/_font.scss */
+.icons-chat3:before {
+  content: "\e943";
+}
+
+/* line 520, ../../src/sass/_font.scss */
+.icons-bubbles2:before {
+  content: "\e943";
+}
+
+/* line 523, ../../src/sass/_font.scss */
+.icons-talk3:before {
+  content: "\e943";
+}
+
+/* line 526, ../../src/sass/_font.scss */
+.icons-message2:before {
+  content: "\e943";
+}
+
+/* line 529, ../../src/sass/_font.scss */
+.icons-conversation2:before {
+  content: "\e943";
+}
+
+/* line 532, ../../src/sass/_font.scss */
+.icons-keyboard:before {
+  content: "\e944";
+}
+
+/* line 535, ../../src/sass/_font.scss */
+.icons-type:before {
+  content: "\e944";
+}
+
+/* line 538, ../../src/sass/_font.scss */
+.icons-keyboard4:before {
+  content: "\e945";
+}
+
+/* line 541, ../../src/sass/_font.scss */
+.icons-type3:before {
+  content: "\e945";
+}
+
+/* line 544, ../../src/sass/_font.scss */
+.icons-tablet2:before {
+  content: "\e946";
+}
+
+/* line 547, ../../src/sass/_font.scss */
+.icons-phone5:before {
+  content: "\e946";
+}
+
+/* line 550, ../../src/sass/_font.scss */
+.icons-gamepad:before {
+  content: "\e947";
+}
+
+/* line 553, ../../src/sass/_font.scss */
+.icons-joystick:before {
+  content: "\e947";
+}
+
+/* line 556, ../../src/sass/_font.scss */
+.icons-pacman:before {
+  content: "\e948";
+}
+
+/* line 559, ../../src/sass/_font.scss */
+.icons-game:before {
+  content: "\e948";
+}
+
+/* line 562, ../../src/sass/_font.scss */
+.icons-bowling-pin:before {
+  content: "\e949";
+}
+
+/* line 565, ../../src/sass/_font.scss */
+.icons-pin:before {
+  content: "\e949";
+}
+
+/* line 568, ../../src/sass/_font.scss */
+.icons-stports:before {
+  content: "\e949";
+}
+
+/* line 571, ../../src/sass/_font.scss */
+.icons-bowling:before {
+  content: "\e94a";
+}
+
+/* line 574, ../../src/sass/_font.scss */
+.icons-ball:before {
+  content: "\e94a";
+}
+
+/* line 577, ../../src/sass/_font.scss */
+.icons-stports2:before {
+  content: "\e94a";
+}
+
+/* line 580, ../../src/sass/_font.scss */
+.icons-baseball:before {
+  content: "\e94b";
+}
+
+/* line 583, ../../src/sass/_font.scss */
+.icons-ball2:before {
+  content: "\e94b";
+}
+
+/* line 586, ../../src/sass/_font.scss */
+.icons-sports:before {
+  content: "\e94b";
+}
+
+/* line 589, ../../src/sass/_font.scss */
+.icons-eight-ball:before {
+  content: "\e94c";
+}
+
+/* line 592, ../../src/sass/_font.scss */
+.icons-snooker:before {
+  content: "\e94c";
+}
+
+/* line 595, ../../src/sass/_font.scss */
+.icons-billiards:before {
+  content: "\e94c";
+}
+
+/* line 598, ../../src/sass/_font.scss */
+.icons-sports2:before {
+  content: "\e94c";
+}
+
+/* line 601, ../../src/sass/_font.scss */
+.icons-soccer:before {
+  content: "\e94d";
+}
+
+/* line 604, ../../src/sass/_font.scss */
+.icons-ball3:before {
+  content: "\e94d";
+}
+
+/* line 607, ../../src/sass/_font.scss */
+.icons-football:before {
+  content: "\e94d";
+}
+
+/* line 610, ../../src/sass/_font.scss */
+.icons-sports3:before {
+  content: "\e94d";
+}
+
+/* line 613, ../../src/sass/_font.scss */
+.icons-football2:before {
+  content: "\e94e";
+}
+
+/* line 616, ../../src/sass/_font.scss */
+.icons-sports4:before {
+  content: "\e94e";
+}
+
+/* line 619, ../../src/sass/_font.scss */
+.icons-ball4:before {
+  content: "\e94e";
+}
+
+/* line 622, ../../src/sass/_font.scss */
+.icons-rugby:before {
+  content: "\e94e";
+}
+
+/* line 625, ../../src/sass/_font.scss */
+.icons-comments:before {
+  content: "\e94f";
+}
+
+/* line 628, ../../src/sass/_font.scss */
+.icons-bubbles3:before {
+  content: "\e94f";
+}
+
+/* line 631, ../../src/sass/_font.scss */
+.icons-chat4:before {
+  content: "\e94f";
+}
+
+/* line 634, ../../src/sass/_font.scss */
+.icons-talk4:before {
+  content: "\e94f";
+}
+
+/* line 637, ../../src/sass/_font.scss */
+.icons-equalizer:before {
+  content: "\e950";
+}
+
+/* line 640, ../../src/sass/_font.scss */
+.icons-settings2:before {
+  content: "\e950";
+}
+
+/* line 643, ../../src/sass/_font.scss */
+.icons-adjust:before {
+  content: "\e950";
+}
+
+/* line 646, ../../src/sass/_font.scss */
+.icons-cog2:before {
+  content: "\e951";
+}
+
+/* line 649, ../../src/sass/_font.scss */
+.icons-gear2:before {
+  content: "\e951";
+}
+
+/* line 652, ../../src/sass/_font.scss */
+.icons-settings4:before {
+  content: "\e951";
+}
+
+/* line 655, ../../src/sass/_font.scss */
+.icons-options2:before {
+  content: "\e951";
+}
+
+/* line 658, ../../src/sass/_font.scss */
+.icons-calculator3:before {
+  content: "\e952";
+}
+
+/* line 661, ../../src/sass/_font.scss */
+.icons-math2:before {
+  content: "\e952";
+}
+
+/* line 664, ../../src/sass/_font.scss */
+.icons-sum:before {
+  content: "\e952";
+}
+
+/* line 667, ../../src/sass/_font.scss */
+.icons-chronometer:before {
+  content: "\e953";
+}
+
+/* line 670, ../../src/sass/_font.scss */
+.icons-timer:before {
+  content: "\e953";
+}
+
+/* line 673, ../../src/sass/_font.scss */
+.icons-clock2:before {
+  content: "\e953";
+}
+
+/* line 676, ../../src/sass/_font.scss */
+.icons-alarm-clock:before {
+  content: "\e954";
+}
+
+/* line 679, ../../src/sass/_font.scss */
+.icons-time:before {
+  content: "\e954";
+}
+
+/* line 682, ../../src/sass/_font.scss */
+.icons-notification:before {
+  content: "\e954";
+}
+
+/* line 685, ../../src/sass/_font.scss */
+.icons-heart3:before {
+  content: "\e955";
+}
+
+/* line 688, ../../src/sass/_font.scss */
+.icons-minus:before {
+  content: "\e955";
+}
+
+/* line 691, ../../src/sass/_font.scss */
+.icons-remove:before {
+  content: "\e955";
+}
+
+/* line 694, ../../src/sass/_font.scss */
+.icons-love2:before {
+  content: "\e955";
+}
+
+/* line 697, ../../src/sass/_font.scss */
+.icons-like2:before {
+  content: "\e955";
+}
+
+/* line 700, ../../src/sass/_font.scss */
+.icons-delete:before {
+  content: "\e955";
+}
+
+/* line 703, ../../src/sass/_font.scss */
+.icons-heart5:before {
+  content: "\e956";
+}
+
+/* line 706, ../../src/sass/_font.scss */
+.icons-plus:before {
+  content: "\e956";
+}
+
+/* line 709, ../../src/sass/_font.scss */
+.icons-add:before {
+  content: "\e956";
+}
+
+/* line 712, ../../src/sass/_font.scss */
+.icons-love4:before {
+  content: "\e956";
+}
+
+/* line 715, ../../src/sass/_font.scss */
+.icons-like4:before {
+  content: "\e956";
+}
+
+/* line 718, ../../src/sass/_font.scss */
+.icons-money-bag:before {
+  content: "\e957";
+}
+
+/* line 721, ../../src/sass/_font.scss */
+.icons-sack-dollar:before {
+  content: "\e957";
+}
+
+/* line 724, ../../src/sass/_font.scss */
+.icons-bag:before {
+  content: "\e957";
+}
+
+/* line 727, ../../src/sass/_font.scss */
+.icons-bag2:before {
+  content: "\e958";
+}
+
+/* line 730, ../../src/sass/_font.scss */
+.icons-sack:before {
+  content: "\e958";
+}
+
+/* line 733, ../../src/sass/_font.scss */
+.icons-money:before {
+  content: "\e958";
+}
+
+/* line 736, ../../src/sass/_font.scss */
+.icons-monitor4:before {
+  content: "\e959";
+}
+
+/* line 739, ../../src/sass/_font.scss */
+.icons-pc5:before {
+  content: "\e959";
+}
+
+/* line 742, ../../src/sass/_font.scss */
+.icons-desktop5:before {
+  content: "\e959";
+}
+
+/* line 745, ../../src/sass/_font.scss */
+.icons-screen5:before {
+  content: "\e959";
+}
+
+/* line 748, ../../src/sass/_font.scss */
+.icons-info:before {
+  content: "\e95a";
+}
+
+/* line 751, ../../src/sass/_font.scss */
+.icons-edit:before {
+  content: "\e95b";
+}
+
+/* line 754, ../../src/sass/_font.scss */
+.icons-pencil2:before {
+  content: "\e95b";
+}
+
+/* line 757, ../../src/sass/_font.scss */
+.icons-write2:before {
+  content: "\e95b";
+}
+
+/* line 760, ../../src/sass/_font.scss */
+.icons-writing:before {
+  content: "\e95b";
+}
+
+/* line 763, ../../src/sass/_font.scss */
+.icons-save2:before {
+  content: "\e95b";
+}
+
+/* line 766, ../../src/sass/_font.scss */
+.icons-volleyball-water:before {
+  content: "\e95c";
+}
+
+/* line 769, ../../src/sass/_font.scss */
+.icons-volleyball:before {
+  content: "\e95d";
+}
+
+/* line 772, ../../src/sass/_font.scss */
+.icons-soccer-ball:before {
+  content: "\e95e";
+}
+
+/* line 775, ../../src/sass/_font.scss */
+.icons-bowling-ball:before {
+  content: "\e95f";
+}
+
+/* line 778, ../../src/sass/_font.scss */
+.icons-tennis-ball:before {
+  content: "\e960";
+}
+
+/* line 781, ../../src/sass/_font.scss */
+.icons-tennis-ball2:before {
+  content: "\e961";
+}
+
+/* line 784, ../../src/sass/_font.scss */
+.icons-basketball:before {
+  content: "\e962";
+}
+
+/* line 787, ../../src/sass/_font.scss */
+.icons-basketball2:before {
+  content: "\e963";
+}
+
+/* line 790, ../../src/sass/_font.scss */
+.icons-basketball3:before {
+  content: "\e964";
+}
+
+/* line 793, ../../src/sass/_font.scss */
+.icons-baseball2:before {
+  content: "\e965";
+}
+
+/* line 796, ../../src/sass/_font.scss */
+.icons-baseball3:before {
+  content: "\e966";
+}
+
+/* line 799, ../../src/sass/_font.scss */
+.icons-folder-add:before {
+  content: "\e967";
+}
+
+/* line 802, ../../src/sass/_font.scss */
+.icons-stop-watch:before {
+  content: "\e968";
+}
+
+/* line 805, ../../src/sass/_font.scss */
+.icons-mail-remove:before {
+  content: "\e969";
+}
+
+/* line 808, ../../src/sass/_font.scss */
+.icons-mail-add:before {
+  content: "\e96a";
+}
+
+/* line 811, ../../src/sass/_font.scss */
+.icons-mail--forbidden:before {
+  content: "\e96b";
+}
+
+/* line 814, ../../src/sass/_font.scss */
+.icons-mail-cancel:before {
+  content: "\e96c";
+}
+
+/* line 817, ../../src/sass/_font.scss */
+.icons-mail-envelope-closed2:before {
+  content: "\e96d";
+}
+
+/* line 820, ../../src/sass/_font.scss */
+.icons-mail-envelope-closed3:before {
+  content: "\e96e";
+}
+
+/* line 823, ../../src/sass/_font.scss */
+.icons-mail-envelope-closed4:before {
+  content: "\e96f";
+}
+
+/* line 826, ../../src/sass/_font.scss */
+.icons-mail-envelope-closed5:before {
+  content: "\e970";
+}
+
+/* line 829, ../../src/sass/_font.scss */
+.icons-information:before {
+  content: "\e971";
+}
+
+/* line 832, ../../src/sass/_font.scss */
+.icons-information2:before {
+  content: "\e972";
+}
+
+/* line 835, ../../src/sass/_font.scss */
+.icons-information3:before {
+  content: "\e973";
+}
+
+/* line 838, ../../src/sass/_font.scss */
+.icons-award:before {
+  content: "\e974";
+}
+
+/* line 841, ../../src/sass/_font.scss */
+.icons-award2:before {
+  content: "\e975";
+}
+
+/* line 844, ../../src/sass/_font.scss */
+.icons-award3:before {
+  content: "\e976";
+}
+
+/* line 847, ../../src/sass/_font.scss */
+.icons-award4:before {
+  content: "\e977";
+}
+
+/* line 850, ../../src/sass/_font.scss */
+.icons-trophy4:before {
+  content: "\e978";
+}
+
+/* line 853, ../../src/sass/_font.scss */
+.icons-mail-envelope-closed:before {
+  content: "\e979";
+}
+
+/* line 856, ../../src/sass/_font.scss */
+.icons-question-circle-o:before {
+  content: "\e97a";
+}
+
+/* line 859, ../../src/sass/_font.scss */
+.icons-question2:before {
+  content: "\e97b";
+}
+
+/* line 862, ../../src/sass/_font.scss */
+.icons-viacoin:before {
+  content: "\e97c";
+}
+
+/* line 865, ../../src/sass/_font.scss */
+.icons-user-circle-o:before {
+  content: "\e97d";
+}
+
+/* line 868, ../../src/sass/_font.scss */
+.icons-user-circle:before {
+  content: "\e97e";
+}
+
+/* line 871, ../../src/sass/_font.scss */
+.icons-keyboard-o:before {
+  content: "\e97f";
+}
+
+/* line 874, ../../src/sass/_font.scss */
+.icons-volume-control-phone:before {
+  content: "\e980";
+}
+
+/* line 877, ../../src/sass/_font.scss */
+.icons-microphone:before {
+  content: "\e981";
+}
+
+/* line 880, ../../src/sass/_font.scss */
+.icons-wechat:before {
+  content: "\e982";
+}
+
+/* line 883, ../../src/sass/_font.scss */
+.icons-weixin:before {
+  content: "\e982";
+}
+
+/* line 886, ../../src/sass/_font.scss */
+.icons-qq:before {
+  content: "\e983";
+}
+
+/* line 889, ../../src/sass/_font.scss */
+.icons-futbol-o:before {
+  content: "\e984";
+}
+
+/* line 892, ../../src/sass/_font.scss */
+.icons-soccer-ball-o:before {
+  content: "\e984";
+}
+
+/* line 895, ../../src/sass/_font.scss */
+.icons-home3:before {
+  content: "\e985";
+}
+
+/* line 898, ../../src/sass/_font.scss */
+.icons-calculator4:before {
+  content: "\e986";
+}
+
+/* line 901, ../../src/sass/_font.scss */
+.icons-cny:before {
+  content: "\e987";
+}
+
+/* line 904, ../../src/sass/_font.scss */
+.icons-jpy:before {
+  content: "\e987";
+}
+
+/* line 907, ../../src/sass/_font.scss */
+.icons-rmb:before {
+  content: "\e987";
+}
+
+/* line 910, ../../src/sass/_font.scss */
+.icons-yen:before {
+  content: "\e987";
+}
+
+/* line 913, ../../src/sass/_font.scss */
+.icons-heartbeat:before {
+  content: "\e988";
+}
+
+/* line 916, ../../src/sass/_font.scss */
+.icons-sign-out2:before {
+  content: "\e989";
+}
+
+/* line 919, ../../src/sass/_font.scss */
+.icons-volume-up2:before {
+  content: "\e98a";
+}
+
+/* line 922, ../../src/sass/_font.scss */
+.icons-info-circle:before {
+  content: "\e98b";
+}
+
+/* line 925, ../../src/sass/_font.scss */
+.icons-info4:before {
+  content: "\e98c";
+}
+
+/* line 928, ../../src/sass/_font.scss */
+.icons-group:before {
+  content: "\e98d";
+}
+
+/* line 931, ../../src/sass/_font.scss */
+.icons-users:before {
+  content: "\e98d";
+}
+
+/* line 934, ../../src/sass/_font.scss */
+.icons-trophy:before {
+  content: "\e98e";
+}
+
+/* line 937, ../../src/sass/_font.scss */
+.icons-edit2:before {
+  content: "\e98f";
+}
+
+/* line 940, ../../src/sass/_font.scss */
+.icons-pencil-square-o:before {
+  content: "\e98f";
+}
+
+/* line 943, ../../src/sass/_font.scss */
+.icons-phone8:before {
+  content: "\e990";
+}
+
+/* line 946, ../../src/sass/_font.scss */
+.icons-log-out:before {
+  content: "\e991";
+}
+
+/* line 949, ../../src/sass/_font.scss */
+.icons-info2:before {
+  content: "\e992";
+}
+
+/* line 952, ../../src/sass/_font.scss */
+.icons-add-user:before {
+  content: "\e993";
+}
+
+/* line 955, ../../src/sass/_font.scss */
+.icons-remove-user:before {
+  content: "\e994";
+}
+
+/* line 958, ../../src/sass/_font.scss */
+.icons-users2:before {
+  content: "\e995";
+}
+
+/* line 961, ../../src/sass/_font.scss */
+.icons-user3:before {
+  content: "\e996";
+}
+
+/* line 964, ../../src/sass/_font.scss */
+.icons-trophy3:before {
+  content: "\e997";
+}
+
+/* line 967, ../../src/sass/_font.scss */
+.icons-credit:before {
+  content: "\e998";
+}
+
+/* ! end font */
+/* addClass */
+/* line 119, ../../src/sass/common.scss */
+.base_blue {
+  color: #0894ec !important;
+}
+
+/* line 122, ../../src/sass/common.scss */
+.base_red {
+  color: #e71516 !important;
+}
+
+/* line 125, ../../src/sass/common.scss */
+.base_red_m {
+  color: #ef473a !important;
+}
+
+/* line 128, ../../src/sass/common.scss */
+.base_violet {
+  color: #886aea !important;
+}
+
+/* line 132, ../../src/sass/common.scss */
+a.base_blue:active {
+  color: #0a8ddf !important;
+}
+
+/* line 135, ../../src/sass/common.scss */
+a.base_red:active {
+  color: #c00a0b !important;
+}
+
+/* line 138, ../../src/sass/common.scss */
+a.base_violet:active {
+  color: #6851b5 !important;
+}
+
+/* line 141, ../../src/sass/common.scss */
+.f_second {
+  font-size: 90%;
+}
+
+/* line 144, ../../src/sass/common.scss */
+.hide {
+  visibility: hidden;
+}
+
+/* line 147, ../../src/sass/common.scss */
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 152, ../../src/sass/common.scss */
+.nobg {
+  background: none !important;
+}
+
+/* line 155, ../../src/sass/common.scss */
+.p_static {
+  position: static;
+}
+
+/* line 158, ../../src/sass/common.scss */
+.yzm_wrap {
+  position: relative;
+}
+/* line 160, ../../src/sass/common.scss */
+.yzm_wrap img {
+  width: 5rem;
+  height: 2.25rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 162, ../../src/sass/common.scss */
+.link_black {
+  color: inherit;
+}
+/* line 164, ../../src/sass/common.scss */
+.link_black a {
+  color: inherit;
+}
+
+/* line 166, ../../src/sass/common.scss */
+.modal_bg_white.popup {
+  background: #fff;
+}
+/* line 169, ../../src/sass/common.scss */
+.modal_bg_white.popup .bar {
+  background-color: #fff;
+}
+/* line 170, ../../src/sass/common.scss */
+.modal_bg_white.popup .bar a {
+  color: inherit;
+}
+
+/* line 178, ../../src/sass/common.scss */
+.modal_bg_white.popup .list-block ul > li, .dashed_list .list-block ul > li {
+  border-bottom-style: dashed;
+}
+
+/* line 184, ../../src/sass/common.scss */
+.no-padd-link .card {
+  margin: .5rem 0;
+}
+/* line 187, ../../src/sass/common.scss */
+.no-padd-link .card-header {
+  font-size: 0.8rem;
+  padding: .3rem .75rem;
+  padding-right: 0;
+}
+/* line 192, ../../src/sass/common.scss */
+.no-padd-link .item-text {
+  height: auto;
+  text-overflow: initial;
+  -webkit-line-clamp: initial;
+}
+
+/* line 198, ../../src/sass/common.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 199, ../../src/sass/common.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 200, ../../src/sass/common.scss */
+.item-text p {
+  text-indent: 2em;
+}
+
+/* line 201, ../../src/sass/common.scss */
+.icon_ac, .icon_gray, .icon_gold, .icon_ac_hot {
+  font-size: 1.2rem;
+  color: transparent;
+  margin-right: 0.5rem;
+}
+
+/* line 202, ../../src/sass/common.scss */
+.icon_ac {
+  background-image: url("../img/icon/activity-ico6.png");
+}
+
+/* line 203, ../../src/sass/common.scss */
+.icon_gray {
+  background-image: url("../img/icon/activity-ico0.png");
+}
+
+/* line 204, ../../src/sass/common.scss */
+.icon_gold {
+  background-image: url("../img/icon/activity-ico2.png");
+}
+
+/* line 205, ../../src/sass/common.scss */
+.icon_ac_hot {
+  background-image: url("../img/icon/activity-ico1.png");
+}
+
+/* line 206, ../../src/sass/common.scss */
+.ol_wrap {
+  padding-left: 0.8rem;
+}
+
+/* line 207, ../../src/sass/common.scss */
+.list_block_m {
+  margin: 0.4rem 0;
+}
+
+/* line 208, ../../src/sass/common.scss */
+.card_nes .card-content {
+  display: none;
+}
+
+/* line 209, ../../src/sass/common.scss */
+.picker-modal {
+  background: #ececec;
+}
+
+/* line 210, ../../src/sass/common.scss */
+.readonly_wrap .item-input input, .readonly_wrap .item-input {
+  color: #9a9a9a;
+}
+
+/* line 211, ../../src/sass/common.scss */
+.wrap_child_color {
+  color: #9a9a9a !important;
+}
+
+/* line 212, ../../src/sass/common.scss */
+.row .col-30 {
+  width: 26%;
+  margin-left: 4%;
+}
+
+/* line 213, ../../src/sass/common.scss */
+.row .col-70 {
+  width: 66%;
+  margin-left: 4%;
+}
+
+/* line 214, ../../src/sass/common.scss */
+.content_color {
+  color: #878787;
+}
+
+/* line 215, ../../src/sass/common.scss */
+.m0 {
+  margin: 0 !important;
+}
+
+/* line 216, ../../src/sass/common.scss */
+.p0 {
+  padding: 0 !important;
+}
+
+/* line 217, ../../src/sass/common.scss */
+.mp0 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* line 218, ../../src/sass/common.scss */
+.popup .list-block .info_wrap {
+  width: 96%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 219, ../../src/sass/common.scss */
+.md_list_block ul > li {
+  padding: 0.2rem 0;
+}
+
+/* ! end  addClass */
+/* banner */
+/* line 223, ../../src/sass/common.scss */
+.swiper-slide img {
+  width: 100%;
+  margin: auto;
+}
+
+/* line 227, ../../src/sass/common.scss */
+.swiper-container {
+  padding-bottom: 0;
+}
+
+/* line 230, ../../src/sass/common.scss */
+.swiper-pagination-bullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #fff;
+  opacity: 0.4;
+}
+
+/* line 236, ../../src/sass/common.scss */
+.swiper-pagination-bullet-active {
+  background: #e71516;
+  opacity: 1;
+}
+
+/* line 240, ../../src/sass/common.scss */
+.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet {
+  margin: 0 0.45rem;
+}
+
+/* line 243, ../../src/sass/common.scss */
+.swiper-button-next, .swiper-button-prev {
+  width: 1.5rem;
+  height: 2.35rem;
+  margin-top: -1.175rem;
+  background: url("../img/icon/a12.png");
+  background-size: 20rem;
+}
+
+/* line 250, ../../src/sass/common.scss */
+.swiper-button-prev {
+  left: 0;
+  background-position: -0.8rem -1.85rem;
+}
+
+/* line 254, ../../src/sass/common.scss */
+.swiper-button-next {
+  right: 0;
+  background-position: -9.75rem -1.85rem;
+}
+
+/* line 258, ../../src/sass/common.scss */
+.swiper-button-prev:active {
+  background-position: -12.8rem -1.85rem;
+}
+
+/* line 261, ../../src/sass/common.scss */
+.swiper-button-next:active {
+  background-position: -15.75rem -1.85rem;
+}
+
+/* ! end  banner */
+/* base_head */
+/* line 267, ../../src/sass/common.scss */
+.base_head {
+  background: #e71516;
+  color: #fff;
+}
+/* line 270, ../../src/sass/common.scss */
+.base_head .title {
+  color: inherit;
+  font-size: 0.9rem;
+}
+/* line 271, ../../src/sass/common.scss */
+.base_head a {
+  color: inherit;
+}
+/* line 272, ../../src/sass/common.scss */
+.base_head .icon {
+  font-size: 1.2rem;
+}
+
+/* ! end base_head */
+/* game_list */
+/* line 278, ../../src/sass/common.scss */
+.game_list .link_box h4, .game_list .link_box img {
+  display: block;
+  margin: auto;
+}
+
+/* line 283, ../../src/sass/common.scss */
+.game_list {
+  margin-top: .4rem;
+}
+/* line 285, ../../src/sass/common.scss */
+.game_list .link_box {
+  position: relative;
+  display: block;
+  margin: .44rem;
+  color: inherit;
+}
+/* line 290, ../../src/sass/common.scss */
+.game_list .link_box h4 {
+  width: 3.6rem;
+  height: 3.6rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(204, 204, 204, 0.26);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 299, ../../src/sass/common.scss */
+.game_list .link_box:active {
+  color: inherit;
+}
+/* line 300, ../../src/sass/common.scss */
+.game_list .link_box img {
+  height: 3rem;
+}
+/* line 301, ../../src/sass/common.scss */
+.game_list .link_box span {
+  font-size: 0.65rem;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 308, ../../src/sass/common.scss */
+.game_list .link_box .icon {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  color: #ffc900;
+  font-size: 0.4rem;
+  -moz-transform: translateX(1.5rem);
+  -ms-transform: translateX(1.5rem);
+  -webkit-transform: translateX(1.5rem);
+  transform: translateX(1.5rem);
+}
+
+/* ! end game_list */
+/* cantact */
+/* line 323, ../../src/sass/common.scss */
+.contact .tab-item {
+  padding: 0.8rem;
+  color: #adadad;
+}
+/* line 327, ../../src/sass/common.scss */
+.contact .tab-item .icon {
+  border: 1px solid;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* ! end cantact */
+/* panel-side-nav */
+/* line 339, ../../src/sass/common.scss */
+.panel-side-nav .item-inner > a {
+  display: block;
+}
+/* line 340, ../../src/sass/common.scss */
+.panel-side-nav .bar-nav {
+  background-color: transparent;
+}
+/* line 341, ../../src/sass/common.scss */
+.panel-side-nav .list-block .item-inner {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+/* ! end panel-side-nav */
+/* login_head */
+/* line 349, ../../src/sass/common.scss */
+.login_before map, .login_after map, .user_head map {
+  display: block;
+  margin: auto;
+  position: relative;
+}
+/* line 353, ../../src/sass/common.scss */
+.login_before map img, .login_after map img, .user_head map img {
+  width: 100%;
+  height: 100%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 358, ../../src/sass/common.scss */
+.login_before map span, .login_after map span, .user_head map span {
+  display: none;
+  font-size: 2rem;
+  position: absolute;
+  right: 0rem;
+  top: 0.4rem;
+}
+/* line 366, ../../src/sass/common.scss */
+.login_before map:active > span, .login_after map:active > span, .user_head map:active > span {
+  display: block;
+}
+/* line 367, ../../src/sass/common.scss */
+.login_before map:active > img, .login_after map:active > img, .user_head map:active > img {
+  opacity: 0.5;
+  -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* line 372, ../../src/sass/common.scss */
+.login_before map {
+  height: 4rem;
+  width: 4rem;
+}
+/* line 376, ../../src/sass/common.scss */
+.login_before .button {
+  width: 3rem;
+  margin: auto;
+}
+
+/* line 381, ../../src/sass/common.scss */
+.login_after {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+}
+/* line 384, ../../src/sass/common.scss */
+.login_after map {
+  height: 3rem;
+  width: 3rem;
+}
+/* line 387, ../../src/sass/common.scss */
+.login_after map span {
+  font-size: 1.5rem;
+}
+/* line 389, ../../src/sass/common.scss */
+.login_after .user_name {
+  margin: 0.4rem 0;
+  font-weight: normal;
+  font-size: 0.9rem;
+  text-transform: none;
+}
+
+/* ! end login_head */
+/* base_footer */
+/* line 399, ../../src/sass/common.scss */
+.base_footer {
+  background: #333;
+}
+/* line 401, ../../src/sass/common.scss */
+.base_footer .tab-item {
+  color: #C1C1C1;
+}
+
+/* ! end base_footer */
+/* user_center */
+/* line 408, ../../src/sass/common.scss */
+.user_head {
+  color: #fff;
+  background: #e71516 !important;
+}
+/* line 411, ../../src/sass/common.scss */
+.user_head map {
+  width: 4rem;
+  height: 4rem;
+}
+/* line 412, ../../src/sass/common.scss */
+.user_head h3 {
+  font-weight: normal;
+  padding: 0.5rem;
+  margin: 0;
+  font-size: 1.1em;
+}
+
+/* line 420, ../../src/sass/common.scss */
+.user_center .row {
+  border-bottom: 1px solid #ececec;
+}
+/* line 421, ../../src/sass/common.scss */
+.user_center .row a {
+  display: block;
+  color: #737373;
+}
+/* line 424, ../../src/sass/common.scss */
+.user_center .row a span {
+  font-size: 0.85em;
+}
+/* line 427, ../../src/sass/common.scss */
+.user_center .row a h3 {
+  font-size: 2rem;
+  margin: 0;
+  display: block;
+}
+/* line 433, ../../src/sass/common.scss */
+.user_center .row div[class*=col] {
+  border-left: 1px solid #ececec;
+}
+
+/* ! end user_center */
+/* money wrap */
+/* line 442, ../../src/sass/common.scss */
+.money_wrap {
+  background: #ef473a !important;
+  color: #fff;
+}
+/* line 445, ../../src/sass/common.scss */
+.money_wrap div[class*=col] {
+  border-right: 1px solid #e71516;
+}
+/* line 448, ../../src/sass/common.scss */
+.money_wrap i {
+  font-style: normal;
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* money wrap */
+/* modal_remit */
+/* line 461, ../../src/sass/common.scss */
+.modal_user .list-block li .card {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ! end modal_remit */
+/* box */
+/* line 12, ../../src/sass/_mixin.scss */
+.display-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  display: -ms-box;
+  display: box;
+  width: 100%;
+}
+
+/* line 24, ../../src/sass/_mixin.scss */
+.box-flex-1 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  display: block;
+}
+
+/* line 24, ../../src/sass/_mixin.scss */
+.box-flex-2 {
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+  -o-box-flex: 2;
+  -ms-box-flex: 2;
+  box-flex: 2;
+  display: block;
+}
+
+/* line 24, ../../src/sass/_mixin.scss */
+.box-flex-3 {
+  -webkit-box-flex: 3;
+  -moz-box-flex: 3;
+  -o-box-flex: 3;
+  -ms-box-flex: 3;
+  box-flex: 3;
+  display: block;
+}
+
+/* line 24, ../../src/sass/_mixin.scss */
+.box-flex-4 {
+  -webkit-box-flex: 4;
+  -moz-box-flex: 4;
+  -o-box-flex: 4;
+  -ms-box-flex: 4;
+  box-flex: 4;
+  display: block;
+}
+
+/* line 24, ../../src/sass/_mixin.scss */
+.box-flex-5 {
+  -webkit-box-flex: 5;
+  -moz-box-flex: 5;
+  -o-box-flex: 5;
+  -ms-box-flex: 5;
+  box-flex: 5;
+  display: block;
+}
+
+/* line 24, ../../src/sass/_mixin.scss */
+.box-flex-6 {
+  -webkit-box-flex: 6;
+  -moz-box-flex: 6;
+  -o-box-flex: 6;
+  -ms-box-flex: 6;
+  box-flex: 6;
+  display: block;
+}
+
+/* line 24, ../../src/sass/_mixin.scss */
+.box-flex-7 {
+  -webkit-box-flex: 7;
+  -moz-box-flex: 7;
+  -o-box-flex: 7;
+  -ms-box-flex: 7;
+  box-flex: 7;
+  display: block;
+}
+
+/* line 24, ../../src/sass/_mixin.scss */
+.box-flex-8 {
+  -webkit-box-flex: 8;
+  -moz-box-flex: 8;
+  -o-box-flex: 8;
+  -ms-box-flex: 8;
+  box-flex: 8;
+  display: block;
+}
+
+/* line 24, ../../src/sass/_mixin.scss */
+.box-flex-9 {
+  -webkit-box-flex: 9;
+  -moz-box-flex: 9;
+  -o-box-flex: 9;
+  -ms-box-flex: 9;
+  box-flex: 9;
+  display: block;
+}
+
+/* line 24, ../../src/sass/_mixin.scss */
+.box-flex-10 {
+  -webkit-box-flex: 10;
+  -moz-box-flex: 10;
+  -o-box-flex: 10;
+  -ms-box-flex: 10;
+  box-flex: 10;
+  display: block;
+}
+
+/* line 24, ../../src/sass/_mixin.scss */
+.box-flex-11 {
+  -webkit-box-flex: 11;
+  -moz-box-flex: 11;
+  -o-box-flex: 11;
+  -ms-box-flex: 11;
+  box-flex: 11;
+  display: block;
+}
+
+/* line 24, ../../src/sass/_mixin.scss */
+.box-flex-12 {
+  -webkit-box-flex: 12;
+  -moz-box-flex: 12;
+  -o-box-flex: 12;
+  -ms-box-flex: 12;
+  box-flex: 12;
+  display: block;
+}
+
+/* ! end box  */

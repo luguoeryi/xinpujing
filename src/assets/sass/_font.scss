@@ -1,0 +1,972 @@
+@mixin fonts_url {
+    @font-face {
+      font-family: 'icomoon';
+      src:  url('../../lib/fonts/icomoon.eot?ba8uq7');
+      src:  url('../../lib/fonts/icomoon.eot?ba8uq7#iefix') format('embedded-opentype'),
+        url('../../lib/fonts/icomoon.ttf?ba8uq7') format('truetype'),
+        url('../../lib/fonts/icomoon.woff?ba8uq7') format('woff'),
+        url('../../lib/fonts/icomoon.svg?ba8uq7#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    [class^="icons-"], [class*=" icons-"] {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'icomoon' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .icons-clock:before {
+      content: "\e900";
+    }
+    .icons-esc:before {
+      content: "\e901";
+    }
+    .icons-home-outline:before {
+      content: "\e902";
+    }
+    .icons-calculator2:before {
+      content: "\e903";
+    }
+    .icons-volume-up:before {
+      content: "\e904";
+    }
+    .icons-info-outline:before {
+      content: "\e905";
+    }
+    .icons-info3:before {
+      content: "\e906";
+    }
+    .icons-message-typing:before {
+      content: "\e907";
+    }
+    .icons-live_help:before {
+      content: "\e908";
+    }
+    .icons-help_outline:before {
+      content: "\e909";
+    }
+    .icons-help2:before {
+      content: "\e90a";
+    }
+    .icons-phone_iphone:before {
+      content: "\e90b";
+    }
+    .icons-keyboard_backspace:before {
+      content: "\e90c";
+    }
+    .icons-arrow_back:before {
+      content: "\e90d";
+    }
+    .icons-home4:before {
+      content: "\e90e";
+    }
+    .icons-volume_up:before {
+      content: "\e90f";
+    }
+    .icons-info_outline:before {
+      content: "\e910";
+    }
+    .icons-chat_bubble:before {
+      content: "\e911";
+    }
+    .icons-money_off:before {
+      content: "\e912";
+    }
+    .icons-attach_money:before {
+      content: "\e913";
+    }
+    .icons-mobile:before {
+      content: "\e914";
+    }
+    .icons-cellular-phone:before {
+      content: "\e914";
+    }
+    .icons-phone:before {
+      content: "\e914";
+    }
+    .icons-phone2:before {
+      content: "\e915";
+    }
+    .icons-contact:before {
+      content: "\e915";
+    }
+    .icons-phone9:before {
+      content: "\e916";
+    }
+    .icons-contact3:before {
+      content: "\e916";
+    }
+    .icons-chat:before {
+      content: "\e917";
+    }
+    .icons-bubble:before {
+      content: "\e917";
+    }
+    .icons-comment:before {
+      content: "\e917";
+    }
+    .icons-talk:before {
+      content: "\e917";
+    }
+    .icons-monitor:before {
+      content: "\e918";
+    }
+    .icons-screen:before {
+      content: "\e918";
+    }
+    .icons-desktop:before {
+      content: "\e918";
+    }
+    .icons-pc:before {
+      content: "\e918";
+    }
+    .icons-calculator:before {
+      content: "\e919";
+    }
+    .icons-math:before {
+      content: "\e919";
+    }
+    .icons-arithmetic:before {
+      content: "\e919";
+    }
+    .icons-screen2:before {
+      content: "\e91a";
+    }
+    .icons-display:before {
+      content: "\e91a";
+    }
+    .icons-monitor2:before {
+      content: "\e91a";
+    }
+    .icons-pc2:before {
+      content: "\e91a";
+    }
+    .icons-computer:before {
+      content: "\e91a";
+    }
+    .icons-desktop2:before {
+      content: "\e91a";
+    }
+    .icons-question-mark:before {
+      content: "\e91b";
+    }
+    .icons-help:before {
+      content: "\e91b";
+    }
+    .icons-iphone:before {
+      content: "\e91c";
+    }
+    .icons-touch:before {
+      content: "\e91c";
+    }
+    .icons-phone4:before {
+      content: "\e91c";
+    }
+    .icons-mobile3:before {
+      content: "\e91c";
+    }
+    .icons-loop:before {
+      content: "\e91d";
+    }
+    .icons-refresh:before {
+      content: "\e91d";
+    }
+    .icons-reload:before {
+      content: "\e91d";
+    }
+    .icons-reset:before {
+      content: "\e91d";
+    }
+    .icons-arrows:before {
+      content: "\e91d";
+    }
+    .icons-reload-alt:before {
+      content: "\e91e";
+    }
+    .icons-refresh2:before {
+      content: "\e91e";
+    }
+    .icons-reset2:before {
+      content: "\e91e";
+    }
+    .icons-arrow:before {
+      content: "\e91e";
+    }
+    .icons-reload2:before {
+      content: "\e91f";
+    }
+    .icons-refresh3:before {
+      content: "\e91f";
+    }
+    .icons-reset3:before {
+      content: "\e91f";
+    }
+    .icons-arrow2:before {
+      content: "\e91f";
+    }
+    .icons-equalizer2:before {
+      content: "\e920";
+    }
+    .icons-settings6:before {
+      content: "\e920";
+    }
+    .icons-options4:before {
+      content: "\e920";
+    }
+    .icons-user:before {
+      content: "\e921";
+    }
+    .icons-profile:before {
+      content: "\e921";
+    }
+    .icons-account:before {
+      content: "\e921";
+    }
+    .icons-avatar:before {
+      content: "\e921";
+    }
+    .icons-keyboard3:before {
+      content: "\e922";
+    }
+    .icons-typing:before {
+      content: "\e922";
+    }
+    .icons-type2:before {
+      content: "\e922";
+    }
+    .icons-input:before {
+      content: "\e922";
+    }
+    .icons-mobile4:before {
+      content: "\e923";
+    }
+    .icons-phone7:before {
+      content: "\e923";
+    }
+    .icons-cellular:before {
+      content: "\e923";
+    }
+    .icons-phone6:before {
+      content: "\e924";
+    }
+    .icons-contact2:before {
+      content: "\e924";
+    }
+    .icons-comment2:before {
+      content: "\e925";
+    }
+    .icons-chat5:before {
+      content: "\e925";
+    }
+    .icons-talk5:before {
+      content: "\e925";
+    }
+    .icons-bubble2:before {
+      content: "\e925";
+    }
+    .icons-home2:before {
+      content: "\e926";
+    }
+    .icons-house:before {
+      content: "\e926";
+    }
+    .icons-wrench:before {
+      content: "\e927";
+    }
+    .icons-settings3:before {
+      content: "\e927";
+    }
+    .icons-options:before {
+      content: "\e927";
+    }
+    .icons-preferences2:before {
+      content: "\e927";
+    }
+    .icons-cog3:before {
+      content: "\e928";
+    }
+    .icons-gear3:before {
+      content: "\e928";
+    }
+    .icons-settings5:before {
+      content: "\e928";
+    }
+    .icons-generate:before {
+      content: "\e928";
+    }
+    .icons-make:before {
+      content: "\e928";
+    }
+    .icons-options3:before {
+      content: "\e928";
+    }
+    .icons-heart4:before {
+      content: "\e929";
+    }
+    .icons-love3:before {
+      content: "\e929";
+    }
+    .icons-favorite:before {
+      content: "\e929";
+    }
+    .icons-like3:before {
+      content: "\e929";
+    }
+    .icons-volume:before {
+      content: "\e92a";
+    }
+    .icons-media-control:before {
+      content: "\e92a";
+    }
+    .icons-monitor3:before {
+      content: "\e92b";
+    }
+    .icons-screen4:before {
+      content: "\e92b";
+    }
+    .icons-desktop4:before {
+      content: "\e92b";
+    }
+    .icons-pc4:before {
+      content: "\e92b";
+    }
+    .icons-user2:before {
+      content: "\e92c";
+    }
+    .icons-profile2:before {
+      content: "\e92c";
+    }
+    .icons-avatar2:before {
+      content: "\e92c";
+    }
+    .icons-head:before {
+      content: "\e92c";
+    }
+    .icons-trophy2:before {
+      content: "\e92d";
+    }
+    .icons-cup:before {
+      content: "\e92d";
+    }
+    .icons-prize:before {
+      content: "\e92d";
+    }
+    .icons-tournament:before {
+      content: "\e92d";
+    }
+    .icons-pencil:before {
+      content: "\e92e";
+    }
+    .icons-write:before {
+      content: "\e92e";
+    }
+    .icons-blog:before {
+      content: "\e92e";
+    }
+    .icons-save:before {
+      content: "\e92e";
+    }
+    .icons-note:before {
+      content: "\e92e";
+    }
+    .icons-credit-card2:before {
+      content: "\e92f";
+    }
+    .icons-card:before {
+      content: "\e92f";
+    }
+    .icons-question:before {
+      content: "\e930";
+    }
+    .icons-keyboard2:before {
+      content: "\e931";
+    }
+    .icons-credit-card:before {
+      content: "\e932";
+    }
+    .icons-home:before {
+      content: "\e933";
+    }
+    .icons-gear:before {
+      content: "\e934";
+    }
+    .icons-diff-added:before {
+      content: "\e935";
+    }
+    .icons-heart2:before {
+      content: "\e936";
+    }
+    .icons-flame2:before {
+      content: "\e937";
+    }
+    .icons-sign-out:before {
+      content: "\e938";
+    }
+    .icons-credit-card3:before {
+      content: "\e939";
+    }
+    .icons-phone3:before {
+      content: "\e93a";
+    }
+    .icons-tablet:before {
+      content: "\e93a";
+    }
+    .icons-mobile2:before {
+      content: "\e93a";
+    }
+    .icons-settings:before {
+      content: "\e93b";
+    }
+    .icons-cog:before {
+      content: "\e93b";
+    }
+    .icons-preferences:before {
+      content: "\e93b";
+    }
+    .icons-heart:before {
+      content: "\e93c";
+    }
+    .icons-love:before {
+      content: "\e93c";
+    }
+    .icons-like:before {
+      content: "\e93c";
+    }
+    .icons-fire:before {
+      content: "\e93d";
+    }
+    .icons-danger:before {
+      content: "\e93d";
+    }
+    .icons-flame:before {
+      content: "\e93d";
+    }
+    .icons-hot:before {
+      content: "\e93d";
+    }
+    .icons-news:before {
+      content: "\e93e";
+    }
+    .icons-paper:before {
+      content: "\e93e";
+    }
+    .icons-display2:before {
+      content: "\e93f";
+    }
+    .icons-screen3:before {
+      content: "\e93f";
+    }
+    .icons-pc3:before {
+      content: "\e93f";
+    }
+    .icons-computer2:before {
+      content: "\e93f";
+    }
+    .icons-desktop3:before {
+      content: "\e93f";
+    }
+    .icons-chat2:before {
+      content: "\e940";
+    }
+    .icons-bubbles:before {
+      content: "\e940";
+    }
+    .icons-talk2:before {
+      content: "\e940";
+    }
+    .icons-message:before {
+      content: "\e940";
+    }
+    .icons-conversation:before {
+      content: "\e940";
+    }
+    .icons-hotairballoon:before {
+      content: "\e941";
+    }
+    .icons-balloon:before {
+      content: "\e941";
+    }
+    .icons-flight:before {
+      content: "\e941";
+    }
+    .icons-air:before {
+      content: "\e941";
+    }
+    .icons-document:before {
+      content: "\e942";
+    }
+    .icons-file:before {
+      content: "\e942";
+    }
+    .icons-paper2:before {
+      content: "\e942";
+    }
+    .icons-text:before {
+      content: "\e942";
+    }
+    .icons-chat3:before {
+      content: "\e943";
+    }
+    .icons-bubbles2:before {
+      content: "\e943";
+    }
+    .icons-talk3:before {
+      content: "\e943";
+    }
+    .icons-message2:before {
+      content: "\e943";
+    }
+    .icons-conversation2:before {
+      content: "\e943";
+    }
+    .icons-keyboard:before {
+      content: "\e944";
+    }
+    .icons-type:before {
+      content: "\e944";
+    }
+    .icons-keyboard4:before {
+      content: "\e945";
+    }
+    .icons-type3:before {
+      content: "\e945";
+    }
+    .icons-tablet2:before {
+      content: "\e946";
+    }
+    .icons-phone5:before {
+      content: "\e946";
+    }
+    .icons-gamepad:before {
+      content: "\e947";
+    }
+    .icons-joystick:before {
+      content: "\e947";
+    }
+    .icons-pacman:before {
+      content: "\e948";
+    }
+    .icons-game:before {
+      content: "\e948";
+    }
+    .icons-bowling-pin:before {
+      content: "\e949";
+    }
+    .icons-pin:before {
+      content: "\e949";
+    }
+    .icons-stports:before {
+      content: "\e949";
+    }
+    .icons-bowling:before {
+      content: "\e94a";
+    }
+    .icons-ball:before {
+      content: "\e94a";
+    }
+    .icons-stports2:before {
+      content: "\e94a";
+    }
+    .icons-baseball:before {
+      content: "\e94b";
+    }
+    .icons-ball2:before {
+      content: "\e94b";
+    }
+    .icons-sports:before {
+      content: "\e94b";
+    }
+    .icons-eight-ball:before {
+      content: "\e94c";
+    }
+    .icons-snooker:before {
+      content: "\e94c";
+    }
+    .icons-billiards:before {
+      content: "\e94c";
+    }
+    .icons-sports2:before {
+      content: "\e94c";
+    }
+    .icons-soccer:before {
+      content: "\e94d";
+    }
+    .icons-ball3:before {
+      content: "\e94d";
+    }
+    .icons-football:before {
+      content: "\e94d";
+    }
+    .icons-sports3:before {
+      content: "\e94d";
+    }
+    .icons-football2:before {
+      content: "\e94e";
+    }
+    .icons-sports4:before {
+      content: "\e94e";
+    }
+    .icons-ball4:before {
+      content: "\e94e";
+    }
+    .icons-rugby:before {
+      content: "\e94e";
+    }
+    .icons-comments:before {
+      content: "\e94f";
+    }
+    .icons-bubbles3:before {
+      content: "\e94f";
+    }
+    .icons-chat4:before {
+      content: "\e94f";
+    }
+    .icons-talk4:before {
+      content: "\e94f";
+    }
+    .icons-equalizer:before {
+      content: "\e950";
+    }
+    .icons-settings2:before {
+      content: "\e950";
+    }
+    .icons-adjust:before {
+      content: "\e950";
+    }
+    .icons-cog2:before {
+      content: "\e951";
+    }
+    .icons-gear2:before {
+      content: "\e951";
+    }
+    .icons-settings4:before {
+      content: "\e951";
+    }
+    .icons-options2:before {
+      content: "\e951";
+    }
+    .icons-calculator3:before {
+      content: "\e952";
+    }
+    .icons-math2:before {
+      content: "\e952";
+    }
+    .icons-sum:before {
+      content: "\e952";
+    }
+    .icons-chronometer:before {
+      content: "\e953";
+    }
+    .icons-timer:before {
+      content: "\e953";
+    }
+    .icons-clock2:before {
+      content: "\e953";
+    }
+    .icons-alarm-clock:before {
+      content: "\e954";
+    }
+    .icons-time:before {
+      content: "\e954";
+    }
+    .icons-notification:before {
+      content: "\e954";
+    }
+    .icons-heart3:before {
+      content: "\e955";
+    }
+    .icons-minus:before {
+      content: "\e955";
+    }
+    .icons-remove:before {
+      content: "\e955";
+    }
+    .icons-love2:before {
+      content: "\e955";
+    }
+    .icons-like2:before {
+      content: "\e955";
+    }
+    .icons-delete:before {
+      content: "\e955";
+    }
+    .icons-heart5:before {
+      content: "\e956";
+    }
+    .icons-plus:before {
+      content: "\e956";
+    }
+    .icons-add:before {
+      content: "\e956";
+    }
+    .icons-love4:before {
+      content: "\e956";
+    }
+    .icons-like4:before {
+      content: "\e956";
+    }
+    .icons-money-bag:before {
+      content: "\e957";
+    }
+    .icons-sack-dollar:before {
+      content: "\e957";
+    }
+    .icons-bag:before {
+      content: "\e957";
+    }
+    .icons-bag2:before {
+      content: "\e958";
+    }
+    .icons-sack:before {
+      content: "\e958";
+    }
+    .icons-money:before {
+      content: "\e958";
+    }
+    .icons-monitor4:before {
+      content: "\e959";
+    }
+    .icons-pc5:before {
+      content: "\e959";
+    }
+    .icons-desktop5:before {
+      content: "\e959";
+    }
+    .icons-screen5:before {
+      content: "\e959";
+    }
+    .icons-info:before {
+      content: "\e95a";
+    }
+    .icons-edit:before {
+      content: "\e95b";
+    }
+    .icons-pencil2:before {
+      content: "\e95b";
+    }
+    .icons-write2:before {
+      content: "\e95b";
+    }
+    .icons-writing:before {
+      content: "\e95b";
+    }
+    .icons-save2:before {
+      content: "\e95b";
+    }
+    .icons-volleyball-water:before {
+      content: "\e95c";
+    }
+    .icons-volleyball:before {
+      content: "\e95d";
+    }
+    .icons-soccer-ball:before {
+      content: "\e95e";
+    }
+    .icons-bowling-ball:before {
+      content: "\e95f";
+    }
+    .icons-tennis-ball:before {
+      content: "\e960";
+    }
+    .icons-tennis-ball2:before {
+      content: "\e961";
+    }
+    .icons-basketball:before {
+      content: "\e962";
+    }
+    .icons-basketball2:before {
+      content: "\e963";
+    }
+    .icons-basketball3:before {
+      content: "\e964";
+    }
+    .icons-baseball2:before {
+      content: "\e965";
+    }
+    .icons-baseball3:before {
+      content: "\e966";
+    }
+    .icons-folder-add:before {
+      content: "\e967";
+    }
+    .icons-stop-watch:before {
+      content: "\e968";
+    }
+    .icons-mail-remove:before {
+      content: "\e969";
+    }
+    .icons-mail-add:before {
+      content: "\e96a";
+    }
+    .icons-mail--forbidden:before {
+      content: "\e96b";
+    }
+    .icons-mail-cancel:before {
+      content: "\e96c";
+    }
+    .icons-mail-envelope-closed2:before {
+      content: "\e96d";
+    }
+    .icons-mail-envelope-closed3:before {
+      content: "\e96e";
+    }
+    .icons-mail-envelope-closed4:before {
+      content: "\e96f";
+    }
+    .icons-mail-envelope-closed5:before {
+      content: "\e970";
+    }
+    .icons-information:before {
+      content: "\e971";
+    }
+    .icons-information2:before {
+      content: "\e972";
+    }
+    .icons-information3:before {
+      content: "\e973";
+    }
+    .icons-award:before {
+      content: "\e974";
+    }
+    .icons-award2:before {
+      content: "\e975";
+    }
+    .icons-award3:before {
+      content: "\e976";
+    }
+    .icons-award4:before {
+      content: "\e977";
+    }
+    .icons-trophy4:before {
+      content: "\e978";
+    }
+    .icons-mail-envelope-closed:before {
+      content: "\e979";
+    }
+    .icons-question-circle-o:before {
+      content: "\e97a";
+    }
+    .icons-question2:before {
+      content: "\e97b";
+    }
+    .icons-viacoin:before {
+      content: "\e97c";
+    }
+    .icons-user-circle-o:before {
+      content: "\e97d";
+    }
+    .icons-user-circle:before {
+      content: "\e97e";
+    }
+    .icons-keyboard-o:before {
+      content: "\e97f";
+    }
+    .icons-volume-control-phone:before {
+      content: "\e980";
+    }
+    .icons-microphone:before {
+      content: "\e981";
+    }
+    .icons-wechat:before {
+      content: "\e982";
+    }
+    .icons-weixin:before {
+      content: "\e982";
+    }
+    .icons-qq:before {
+      content: "\e983";
+    }
+    .icons-futbol-o:before {
+      content: "\e984";
+    }
+    .icons-soccer-ball-o:before {
+      content: "\e984";
+    }
+    .icons-home3:before {
+      content: "\e985";
+    }
+    .icons-calculator4:before {
+      content: "\e986";
+    }
+    .icons-cny:before {
+      content: "\e987";
+    }
+    .icons-jpy:before {
+      content: "\e987";
+    }
+    .icons-rmb:before {
+      content: "\e987";
+    }
+    .icons-yen:before {
+      content: "\e987";
+    }
+    .icons-heartbeat:before {
+      content: "\e988";
+    }
+    .icons-sign-out2:before {
+      content: "\e989";
+    }
+    .icons-volume-up2:before {
+      content: "\e98a";
+    }
+    .icons-info-circle:before {
+      content: "\e98b";
+    }
+    .icons-info4:before {
+      content: "\e98c";
+    }
+    .icons-group:before {
+      content: "\e98d";
+    }
+    .icons-users:before {
+      content: "\e98d";
+    }
+    .icons-trophy:before {
+      content: "\e98e";
+    }
+    .icons-edit2:before {
+      content: "\e98f";
+    }
+    .icons-pencil-square-o:before {
+      content: "\e98f";
+    }
+    .icons-phone8:before {
+      content: "\e990";
+    }
+    .icons-log-out:before {
+      content: "\e991";
+    }
+    .icons-info2:before {
+      content: "\e992";
+    }
+    .icons-add-user:before {
+      content: "\e993";
+    }
+    .icons-remove-user:before {
+      content: "\e994";
+    }
+    .icons-users2:before {
+      content: "\e995";
+    }
+    .icons-user3:before {
+      content: "\e996";
+    }
+    .icons-trophy3:before {
+      content: "\e997";
+    }
+    .icons-credit:before {
+      content: "\e998";
+    }
+
+
+}
