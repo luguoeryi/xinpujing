@@ -207,7 +207,7 @@
 				formData.append('email', this.email)
 
 				if( this.agree ){
-					this.$http.get('/someUrl', formData).then((response) => {
+					this.$http.post('/someUrl', formData).then((response) => {
 						
 						console.log('注册成功')
 
