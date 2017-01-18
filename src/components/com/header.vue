@@ -7,9 +7,7 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import vueResource from 'vue-resource'
-Vue.use(vueResource)
+
 
 	export default {
 		name:'Header',

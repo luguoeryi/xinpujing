@@ -16,7 +16,9 @@
                     </div>
                     <div class="box-flex-10">
                         <div class="info_wrap animation_float clear open-popup" data-popup=".modal_news">
-                            <span class="news_info pull-left">welcome</span>
+                            <div class="news_info pull-left">
+                                <span  v-for="item in $store.state.newinfo">{{ item }} &nbsp;&nbsp;</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -129,14 +131,8 @@
             <div class="content">
                 <div class="list-block">
                     <ul>
-                        <li class="item-content">
-                            <div class="item-inner">1. About</div>
-                        </li>
-                        <li class="item-content">
-                            <div class="item-inner">2. Close popup</div>
-                        </li>
-                        <li class="item-content">
-                            <div class="item-inner">3. Lorem ipsum dolor ...</div>
+                        <li class="item-content" v-for="item in $store.state.newinfo">
+                            <div class="item-inner">{{ item }}</div>
                         </li>
                     </ul>
                 </div>

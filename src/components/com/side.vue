@@ -27,24 +27,27 @@
 
     <div class="panel panel-right panel-reveal theme-dark panel-side-nav" id="side_right">
         <header class="content-block-title">
-            <!-- <section class="login_before">
-                <map><img src="../../assets/img/icon/tx.png" alt=""><span class="icon icons-note"></span></map>
-                <p><a class="button button-fill button-big button-danger" href="#">登录</a></p>
-            </section> -->
 
-            <section class="display-box login_after">
+            <section class="display-box login_after" v-if="isLogin">
                 <div class="box-flex-5">
                     <map><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" alt=""><span class="icon icons-note"></span></map></map>
                 </div>
                 <div class="box-flex-7">
-                    <h4 class="user_name">vh0001</h4>
-                    <span>余额: 0.00</span>
+                    <h4 class="user_name">{{ $store.state.username }}</h4>
+                    <span>余额: {{ $store.state.money.usermoney }}</span>
                 </div>
             </section>
+
+            <section class="login_before" v-else>
+                <map><img src="../../assets/img/icon/tx.png" alt=""><span class="icon icons-note"></span></map>
+                <p><a class="button button-fill button-big button-danger" href="#">登录</a></p>
+            </section>
+
         </header>
         <div class="list-block cards-list">
             <ul>
                 <li class="card item-link">
+                    
                     <div class="card-content">
                         <router-link to="/user" class="card-content-inner item-inner">
                             <span class="icon icons-user3"></span>我的账户
@@ -69,6 +72,15 @@
                     </div>
                 </li>
             </ul>
+
+            <ul style="margin-top:18px;" v-if="isLogin">
+                <li class="card item-link">
+                    <div class="card-content">
+                        <a href="#" @click="$store.commit('setLogin', 0)" class="card-content-inner item-inner"><span class="icon icons-volume-up2"></span>退出</a>
+                    </div>
+                </li>
+            </ul>
+
         </div>
     </div>
 
@@ -94,6 +106,11 @@
                     {name:'我的最爱', to:'/mylove'},
                     {name:'最近浏览', to:'myhistory'}
                 ]
+            }
+        },
+        computed:{
+            isLogin(){
+                return this.$store.state.isLogin  ? true : false;
             }
         }
     }

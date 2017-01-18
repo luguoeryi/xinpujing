@@ -50,54 +50,50 @@ const router = new VueRouter({
 	mode:'history',
 	base:__dirname,
 	routes:[
-	    {path:'/', components:{
-            default:Home,
-            mainSide:vSide
-        }},
 	    {path:'/wap', name:'home', components:{
             default:Home,
             mainSide:vSide
         }},
-        {path:'/login', name:'login', component:Login},
-        {path:'/reg', name:'reg', component:Reg},
-        {path:'/forget', name:'forget', component:Forget},
-        {path:'/lottery', name:'lottery', components:{
+        {path:'/wap/login', name:'login', component:Login},
+        {path:'/wap/reg', name:'reg', component:Reg},
+        {path:'/wap/forget', name:'forget', component:Forget},
+        {path:'/wap/lottery', name:'lottery', components:{
             default:Lottery,
             mainSide:vSide
         }},
-        {path:'/game', name:'game', components:{
+        {path:'/wap/game', name:'game', components:{
             default:Game,
             mainSide:vSide
         }},
-        {path:'/sport', name:'sport', components:{
+        {path:'/wap/sport', name:'sport', components:{
             default:Sport,
             mainSide:vSide
         }},
-        {path:'/live', name:'live', components:{
+        {path:'/wap/live', name:'live', components:{
             default:Live,
             mainSide:vSide
         }},
-        {path:'/activity', name:'activity', components:{
+        {path:'/wap/activity', name:'activity', components:{
             default:Activity,
             mainSide:vSide
         }},
 
-        {path:'/lotterymain', name:'lotterym', components:{
+        {path:'/wap/lotterymain', name:'lotterym', components:{
             default:LotteryMain,
             mainSide:vSide
         }},
 
-        {path:'/user', name:'user', component:User},
-        {path:'/user/money', name:'money', component:Money},
-        {path:'/user/remit', name:'remit', component:Remit},
-        {path:'/user/bankbind', name:'bankbind', component:Bankbind},
-        {path:'/user/drawing', name:'drawing', component:Drawing},
-        {path:'/user/mtransform', name:'mtransform', component:Mtransform},
-        {path:'/user/record', name:'record', component:Record},
-        {path:'/user/news', name:'news', component:News},
-        {path:'/user/gamenews', name:'gamenews', component:GameNews},
+        {path:'/wap/user', name:'user', component:User},
+        {path:'/wap/user/money', name:'money', component:Money},
+        {path:'/wap/user/remit', name:'remit', component:Remit},
+        {path:'/wap/user/bankbind', name:'bankbind', component:Bankbind},
+        {path:'/wap/user/drawing', name:'drawing', component:Drawing},
+        {path:'/wap/user/mtransform', name:'mtransform', component:Mtransform},
+        {path:'/wap/user/record', name:'record', component:Record},
+        {path:'/wap/user/news', name:'news', component:News},
+        {path:'/wap/user/gamenews', name:'gamenews', component:GameNews},
 
-        {path:'/user/orderremit', name:'orderremit', component:OrderRemit},
+        {path:'/wap/user/orderremit', name:'orderremit', component:OrderRemit},
 
 		{path:'*', component:is404}
 	]
@@ -130,7 +126,10 @@ const vm = new Vue({
     beforeCreate (){
         //console.log(router)
         if( this.$store.state.isLogin != 1 ){
-          router.push({path:'/login'});
+          router.push({path:'/wap/login'});
         }
+        console.log( this.$store.state.isLogin )
     }
 }).$mount('#app')
+
+window.vm = vm;
