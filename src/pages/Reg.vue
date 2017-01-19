@@ -106,6 +106,15 @@
 		                    <div class="item-content">
 		                        <div class="item-media"><i class="icon icon-form-name">*</i></div>
 		                        <div class="item-inner">
+		                            <div class="item-title label">QQ</div>
+		                            <div class="item-input"><input type="number" v-model="qq"></div>
+		                        </div>
+		                    </div>
+		                </li>
+		                <li>
+		                    <div class="item-content">
+		                        <div class="item-media"><i class="icon icon-form-name">*</i></div>
+		                        <div class="item-inner">
 		                            <div class="item-title label">邮箱</div>
 		                            <div class="item-input"><input type="text" v-model="email"></div>
 		                        </div>
@@ -118,7 +127,7 @@
 		                        </div>
 		                        <div class="item-inner">
 		                            <div class="item-title label">验证码</div>
-		                            <div class="item-input yzm_wrap"><input type="number" placeholder="请点击" pattern="\d{4}" v-model="yzm"><img src="../assets/img/icon/validCode.jpg" alt=""></div>
+		                            <div class="item-input yzm_wrap"><input type="number" @focus="qieYzm" placeholder="请点击" pattern="\d{4}" v-model="yzm"><img :src="yzmURL" alt=""></div>
 		                        </div>
 		                    </div>
 		                </li>
@@ -167,6 +176,7 @@
 		components:{ageement},
 		data(){
 			return {
+				yzmURL:'../assets/img/icon/validCode.jpg',
 				agentname: '',
 				username: '',
 				userpassA: '',
@@ -175,11 +185,15 @@
 				realname: '',
 				tel: '',
 				email: '',
+				qq: '',
 				yzm: '',
-				agree: false
+				agree: true
 			}
 		},
 		methods:{
+			qieYzm(){
+				this.yzmURL = this.$store.state.yzm+'?'+Math.random();
+			},
 			submit(){				
 				console.group('user')
 				console.log(this.agentname)
@@ -190,6 +204,7 @@
 				console.log(this.realname)
 				console.log(this.tel)
 				console.log(this.email)
+				console.log(this.qq)
 				console.log(this.yzm)
 				console.log(this.agree)
 				console.groupEnd('user')
@@ -205,18 +220,33 @@
 				formData.append('real_name', this.realname)
 				formData.append('tel', this.tel)
 				formData.append('email', this.email)
+				formData.append('tel', this.qq)
+				formData.append('yzm', this.yzm)
 
 				if( this.agree ){
-					this.$http.post('/someUrl', formData).then((response) => {
+					this.$http.post(this.$store.state.serverURL+'save.php', formData).then((response) => {
 						
-						console.log('注册成功')
+						console.log( response )
+						var datas = JSON.parse( response.data )
+						console.log( datas )
 
-						this.$store.state.isLogin = 1
+						if( datas.zt == 1 ){
 
-						this.$router.push({name:'home'})
+							this.$store.state.isLogin = datas.zt 
+							this.$store.state.money = datas.money
+							this.$store.state.username = datas.username
+							this.$router.push({name:'home'})
+							this.$store.state.isLogin = 1
+
+						}else {
+							$.alert(datas.info)
+						}
+
 
 					}, (error) => {
-						alert('注册失败'+error);
+
+						alert('服务器错误'+error);
+
 					});
 				}
 

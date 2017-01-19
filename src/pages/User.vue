@@ -15,7 +15,7 @@
                         <input style="display: none;" type="file" >
                     </map>
                 </label>
-                <h3>vh0001</h3>
+                <h3>{{ $store.state.username }}</h3>
             </section>
             <!-- ! end user mu -->
 
@@ -23,11 +23,11 @@
             <section class="money_wrap text-center">
                 <div class="row">
                     <router-link :to="{name:'money', params:{a:123}}" tag="div" class="col-50">
-                        <i>0.00</i>
+                        <i>{{ $store.state.money }}</i>
                         <span>账户余额</span>
                     </router-link>
                     <router-link :to="{name:'news'}" tag="div" class="col-50">
-                        <i>0</i>
+                        <i>{{ $store.state.msg.length }}</i>
                         <span>最新消息</span>
                     </router-link>
                 </div>

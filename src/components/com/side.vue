@@ -34,13 +34,13 @@
                 </div>
                 <div class="box-flex-7">
                     <h4 class="user_name">{{ $store.state.username }}</h4>
-                    <span>余额: {{ $store.state.money.usermoney }}</span>
+                    <span>余额: {{ $store.state.money }}</span>
                 </div>
             </section>
 
             <section class="login_before" v-else>
                 <map><img src="../../assets/img/icon/tx.png" alt=""><span class="icon icons-note"></span></map>
-                <p><a class="button button-fill button-big button-danger" href="#">登录</a></p>
+                <p><router-link :to="{name:'login'}" class="button button-fill button-big button-danger">登录</router-link></p>
             </section>
 
         </header>
@@ -49,26 +49,26 @@
                 <li class="card item-link">
                     
                     <div class="card-content">
-                        <router-link to="/user" class="card-content-inner item-inner">
+                        <router-link :to="{name:'user'}" class="card-content-inner item-inner">
                             <span class="icon icons-user3"></span>我的账户
                         </router-link>
                     </div>
                 </li>
                 <li class="card item-link">
                     <div class="card-content">
-                        <router-link to="/user" class="card-content-inner item-inner"><span class="icon icons-news"></span>交易记录</router-link>
+                        <router-link :to="{name:'record'}" class="card-content-inner item-inner"><span class="icon icons-news"></span>交易记录</router-link>
                     </div>
                 </li>
             </ul>
             <ul style="margin-top:18px;">
                 <li class="card item-link">
                     <div class="card-content">
-                        <router-link to="/user" class="card-content-inner item-inner"><span class="icon icons-talk"></span>最新消息</router-link>
+                        <router-link :to="{name:'news'}" class="card-content-inner item-inner"><span class="icon icons-talk"></span>最新消息</router-link>
                     </div>
                 </li>
                 <li class="card item-link">
                     <div class="card-content">
-                        <router-link to="/user" class="card-content-inner item-inner"><span class="icon icons-volume-up2"></span>游戏公告</router-link>
+                        <router-link :to="{name:'gamenews'}" class="card-content-inner item-inner"><span class="icon icons-volume-up2"></span>游戏公告</router-link>
                     </div>
                 </li>
             </ul>
@@ -76,7 +76,7 @@
             <ul style="margin-top:18px;" v-if="isLogin">
                 <li class="card item-link">
                     <div class="card-content">
-                        <a href="#" @click="$store.commit('setLogin', 0)" class="card-content-inner item-inner"><span class="icon icons-volume-up2"></span>退出</a>
+                        <a href="#" class="card-content-inner item-inner" @click="logout"><span class="icon icons-volume-up2"></span>退出</a> <!-- @click="$store.commit('setLogin', 0)" -->
                     </div>
                 </li>
             </ul>
@@ -111,6 +111,26 @@
         computed:{
             isLogin(){
                 return this.$store.state.isLogin  ? true : false;
+            }
+        },
+        methods:{
+            logout(){
+                this.$http.get(this.$store.state.serverURL+'logout.php').then((response) => {
+          
+                    var datas = JSON.parse( response.data )
+
+                    if( datas == 1 ){
+                        this.$store.state.isLogin = 0
+                        $.alert('退出成功')
+                    }else {
+                        $.alert('退出失败')
+                    }
+
+                }, (error) => {
+                    console.log( error )
+                    $.alert('服务器错误：'+error)
+
+                });
             }
         }
     }

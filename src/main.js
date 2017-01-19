@@ -126,9 +126,9 @@ const vm = new Vue({
     beforeCreate (){
         //console.log(router)
         if( this.$store.state.isLogin != 1 ){
-          router.push({path:'/wap/login'});
+          //router.push({path:'/wap/login'});
         }
-        console.log( '实际：'+this.$store.state.isLogin )
+        //console.log( '实际：'+this.$store.state.isLogin )
     }
 }).$mount('#app')
 
