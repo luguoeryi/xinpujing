@@ -8,7 +8,7 @@
         <div class="content">
             <div class="list-block">
                 <ul>
-                    <li class="item-content" v-for="item in type">
+                    <li class="item-content close-popup" v-for="item in $store.state.normalLottery" @click="setType(item)">
                         <div class="item-inner">{{ item }}</div>
                     </li>
                 </ul>
@@ -20,25 +20,37 @@
 
 <script>
 	export default {
-		name: 'lotteryType',
-		data(){
-			return {
-				type:[
-					'六合彩',
-					'重庆时时彩',
-					'北京PK拾',
-					'重庆快乐十分',
-					'广东快乐十分',
-					'北京快乐8',
-					'广东11选5',
-					'广西十分彩',
-					'天津快乐十分',
-					'福彩3D',
-					'排列3',
-					'上海时时乐',
-					'天津时时彩',
-					'敬请期待...'
-				]
+		name: 'lotteryTypes',
+		methods:{
+			setType(type){
+
+				$.showPreloader('正在加载'+type+'...')
+
+				var formData = new FormData()
+				formData.append('lottery', 'cq')
+				
+		        this.$http.post(this.$store.state.serverURL+'cplist.php', formData).then((response) => {
+
+		        	var datas = JSON.parse( response.data )
+
+		        	console.log( datas )
+
+					this.$store.state.activeLottery = type
+
+					$.hidePreloader()
+
+					$.toast('加载成功~', 500)
+
+		        }, (error) => {
+
+		        	console.log( error )
+
+		        	$.hidePreloader()
+
+		        	$.alert('服务器错误: status: '+error.status)
+
+		        })
+
 			}
 		}
 	}

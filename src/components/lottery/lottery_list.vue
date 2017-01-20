@@ -1,205 +1,18 @@
 <template>
 	<section class="lottery_lists list-block cards-list mp0 no-padd-link">
 		<ul>
-			<li class="card">
+			<li class="card" v-for="item in $store.state.now.ball">
 				<div class="card-header">
-					<h4 class="m0 item-inner" @click="checkShow('items_1')"><i class="ltSub" :class="{'active':items_1}"></i>总和/龙虎</h4>
+					<h4 class="m0 item-inner" @click="checkShow('items_1')"><i class="ltSub" :class="{'active':items_1}"></i>{{ item.wanfa }}</h4>
 				</div>
 				<div class="card-content" v-show="items_1">
-					<section class="display-box">
-						<div class="box-flex-4">
+					<section class="row">
+						<div class="col-33" v-for="itm in item.listball">
 							<label>
 								<input type="checkbox">
 								<div class="ball_item">
-									<i class="blueball-sm blueBs5">5</i>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-					</section>
-					<section class="display-box">
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<i class="blueball-sm blueBs7">7</i>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<i class="blueball-sm blueBs9">9</i>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<i class="blueball-sm blueBs3">3</i>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-					</section>
-					<section class="display-box">
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-					</section>
-				</div>
-			</li>
-			<li class="card">
-				<div class="card-header">
-					<h4 class="m0 item-inner" @click="checkShow('items_2')"><i class="ltSub":class="{'active':items_2}"></i>总和/龙虎</h4>
-				</div>
-				<div class="card-content" v-show="items_2">
-					<section class="display-box">
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-					</section>
-					<section class="display-box">
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-					</section>
-					<section class="display-box">
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
-									<i class="icon icon-check ic_on"></i>
-								</div>
-							</label>
-						</div>
-						<div class="box-flex-4">
-							<label>
-								<input type="checkbox">
-								<div class="ball_item">
-									<span>单</span>
-									<strong>1.98</strong>
+									<i :class="itm.leixin | isNum">{{ itm.leixin }}</i>
+									<strong>{{ itm.haoma }}</strong>
 									<i class="icon icon-check ic_on"></i>
 								</div>
 							</label>
@@ -216,13 +29,18 @@
 		name:'Lotterylist',
 		data(){
 			return {
-				items_1:true,
-				items_2:true
+				items_1: true,
+				items_2: true
 			}
 		},
 		methods:{
 			checkShow(attr){
 				this[attr] = !this[attr]
+			}
+		},
+		filters:{
+			isNum(value){
+				return typeof value == 'number'  ||  !isNaN( Number(value) )  ?  'blueball-sm blueBs'+value : '';
 			}
 		}
 	}
@@ -308,6 +126,7 @@
 		input[type=checkbox]{
 			display: none;
 		}
+		i,em { font-style: normal; }
 	}
 
 

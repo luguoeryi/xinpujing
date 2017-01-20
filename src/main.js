@@ -50,6 +50,10 @@ const router = new VueRouter({
 	mode:'history',
 	base:__dirname,
 	routes:[
+        {path:'/', components:{
+            default:Home,
+            mainSide:vSide
+        }},
 	    {path:'/wap', name:'home', components:{
             default:Home,
             mainSide:vSide

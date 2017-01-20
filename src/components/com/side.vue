@@ -95,16 +95,16 @@
         data(){
             return {
                 leftTop: [
-                    {name:'首页', to:'/'},
-                    {name:'真人视讯', to:'/live'},
-                    {name:'体育赛事', to:'/sport'},
-                    {name:'彩票游戏', to:'/lottery'},
-                    {name:'电子游戏', to:'/game'}
+                    {name:'首页', to:'/wap'},
+                    {name:'真人视讯', to:'/wap/live'},
+                    {name:'体育赛事', to:'/wap/sport'},
+                    {name:'彩票游戏', to:'/wap/lottery'},
+                    {name:'电子游戏', to:'/wap/game'}
                 ],
                 leftBotton: [
-                    {name:'优惠活动', to:'/activity'},
-                    {name:'我的最爱', to:'/mylove'},
-                    {name:'最近浏览', to:'myhistory'}
+                    {name:'优惠活动', to:'/wap/activity'},
+                    {name:'我的最爱', to:'/wap/mylove'},
+                    {name:'最近浏览', to:'/wap/myhistory'}
                 ]
             }
         },
@@ -121,6 +121,7 @@
 
                     if( datas == 1 ){
                         this.$store.state.isLogin = 0
+                        $.closePanel()
                         $.alert('退出成功')
                     }else {
                         $.alert('退出失败')

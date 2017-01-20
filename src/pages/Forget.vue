@@ -47,7 +47,7 @@
 	                        <div class="item-inner">
 	                            <div class="item-title label">原密码</div>
 	                            <div class="item-input">
-	                                <input type="password" v-model="oddPass">
+	                                <input type="password" v-model.trim="oddPass">
 	                            </div>
 	                        </div>
 	                    </div>
@@ -57,7 +57,7 @@
 	                        <div class="item-inner">
 	                            <div class="item-title label">新密码</div>
 	                            <div class="item-input">
-	                                <input type="password" v-model="newPass">
+	                                <input type="password" v-model.trim="newPass">
 	                            </div>
 	                        </div>
 	                    </div>
@@ -67,7 +67,7 @@
 	                        <div class="item-inner">
 	                            <div class="item-title label">确认密码</div>
 	                            <div class="item-input">
-	                                <input type="password" v-model="newPassto">
+	                                <input type="password" v-model.trim="newPassto">
 	                            </div>
 	                        </div>
 	                    </div>
@@ -109,8 +109,7 @@ import vHeader from '../components/com/header.vue'
 		},
 		methods:{
 			resetPass(){
-				console.log(1212212)
-				//if( this.oddPass.length &&  this.newPass.length && this.newPassto.length && this.yzm.length ){
+				if( this.oddPass.length &&  this.newPass.length && this.newPassto.length && this.yzm ){
 
 					var formData = new FormData()
 					formData.append('opwd', this.oddPass)
@@ -146,7 +145,7 @@ import vHeader from '../components/com/header.vue'
 						$.alert('服务器错误'+error.status);
 					});
 
-				//}
+				}
 
 			}
 		}
