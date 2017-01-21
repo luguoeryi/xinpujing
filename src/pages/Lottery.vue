@@ -23,10 +23,10 @@
                         </a>
                     </div>
                     <div class="box-flex-3">
-                        <a class="link_box" href="#">
+                        <router-link :to="{name:'lotterym', query:{code:'cq'}}" class="link_box" >
                             <img src="../assets/img/menu/c2img_ssc_cq.png" alt="">
                             <span>重庆时时彩</span>
-                        </a>
+                        </router-link>
                     </div>
                     <div class="box-flex-3">
                         <a class="link_box" href="#">
@@ -49,10 +49,10 @@
                         </a>
                     </div>
                     <div class="box-flex-3">
-                        <a class="link_box" href="#">
-                            <img src="../assets/img/menu/c2img_ssc_tj.png" alt="">
+                        <router-link :to="{name:'lotterym', query:{name:'天津时时彩', code:'tj'}}" class="link_box">
+                            <img src="../assets/img/menu/c2img_ssc_tj.png" alt="" >
                             <span>天津时时彩</span>
-                        </a>
+                        </router-link>
                     </div>
                     <div class="box-flex-3">
                         <a class="link_box" href="#">

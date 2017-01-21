@@ -1,88 +1,41 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import functions from '../lib/js/function'
 Vue.use(Vuex)
 
 let normalLottery = [
-	'重庆时时彩',
-	'重庆快乐十分',
-	'广东快乐十分',
-	'天津时时彩',
-	'北京快乐8',
-	'广东11选5',
-	'广西十分彩',
-	'天津快乐十分',
-	'上海时时乐',
-	'北京PK拾',
-	'六合彩',
-	'福彩3D',
-	'排列3'
+	{name:'重庆时时彩', code:'cq'},
+	{name:'重庆快乐十分', code:'cqsf'},
+	{name:'广东快乐十分', code:'gdsf'},
+	{name:'天津时时彩', code:'tj'},
+	{name:'北京快乐8', code:'kl8'},
+	{name:'广东11选5', code:'gd11'},
+	{name:'广西十分彩', code:'gxsf'},
+	{name:'天津快乐十分', code:'tjsf'},
+	{name:'上海时时乐', code:'t3'},
+	{name:'北京PK拾', code:'pk10'},
+	{name:'六合彩', code:'lhc'},
+	{name:'福彩3D', code:'d3'},
+	{name:'排列3', code:'p3'}
 ]
 
-let activeLottery = '重庆时时彩'
+let activeLottery = {name:'重庆时时彩', code:'cq'}
 
-let oPre = {qishu: '023', ball: '94629'}
-
-let oNow = {
-	qishu:'024',
-    touTime:'12:43:52',
-    fengTime:'12:48:56',
-    kaiTime:'12:50:56',
-    type:'重庆时时彩',
-    ball:[
-        {
-          wanfa:'总和/龙虎',
-          listball:[
-              {
-                    leixin:'单',
-                    haoma:'1.98'
-              },{
-                    leixin:'双',
-                    haoma:'1.98'
-              },{
-                    leixin:6,
-                    haoma:'1.98'
-              },{
-                    leixin:5,
-                    haoma:'1.98'
-              },{
-                    leixin:'双',
-                    haoma:'1.98'
-              },{
-                    leixin:'单',
-                    haoma:'1.98'
-              },{
-                    leixin:'单',
-                    haoma:'1.98'
-              }
-          ]
-        },{
-          wanfa:'珠仔',
-          listball:[
-              {
-                    leixin:'单',
-                    haoma:'1.98'
-              },{
-                    leixin:'双',
-                    haoma:'1.28'
-              },{
-                    leixin:3,
-                    haoma:'1.98'
-              },{
-                    leixin:'双',
-                    haoma:'1.28'
-              },{
-                    leixin:'单',
-                    haoma:'1.98'
-              },{
-                    leixin:'双',
-                    haoma:'1.28'
-              }
-          ]
-        }
-
-    ]
+let lotteryData = {
+    ball:{
+        万定位:[
+           '9.80','9.80','9.80','9.80','9.80','9.80','9.80','9.80','9.80'
+        ],
+        仟定位:[
+            '9.80','9.80','9.80','9.80','9.80','9.80','9.80','9.80','9.80'
+        ]
+    },
+    fenpan:'2017-01-21 10:09:00',
+    kaijiang:'2017-01-21 10:10:00',
+    qishu:'20170121025',
+    result:['20170116023',['5','1','9','3','1']],
+    zt:1
 }
-
 
 
 const state = {
@@ -99,9 +52,17 @@ const state = {
 	//lottery
 	activeLottery: activeLottery,
 	normalLottery: normalLottery,
-	pre: oPre,
-	now: oNow,
-	jiezhiTime: '00:02:12'
+
+	lotteryData:lotteryData,
+
+	jiezhiTime: '00:02:12',  //投注截止
+	kaipanjiezhi: '00:00:15',   //离开盘截止时间
+	timeOut: '15000',	//开奖延迟时间：毫秒
+	touTimer:null,
+	kaiTimer:null,
+
+	//function
+	functions:functions
 }
 
 

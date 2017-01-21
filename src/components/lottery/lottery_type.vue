@@ -9,7 +9,7 @@
             <div class="list-block">
                 <ul>
                     <li class="item-content close-popup" v-for="item in $store.state.normalLottery" @click="setType(item)">
-                        <div class="item-inner">{{ item }}</div>
+                        <div class="item-inner">{{ item.name }}</div>
                     </li>
                 </ul>
             </div>
@@ -24,32 +24,7 @@
 		methods:{
 			setType(type){
 
-				$.showPreloader('正在加载'+type+'...')
-
-				var formData = new FormData()
-				formData.append('lottery', 'cq')
-				
-		        this.$http.post(this.$store.state.serverURL+'cplist.php', formData).then((response) => {
-
-		        	var datas = JSON.parse( response.data )
-
-		        	console.log( datas )
-
-					this.$store.state.activeLottery = type
-
-					$.hidePreloader()
-
-					$.toast('加载成功~', 500)
-
-		        }, (error) => {
-
-		        	console.log( error )
-
-		        	$.hidePreloader()
-
-		        	$.alert('服务器错误: status: '+error.status)
-
-		        })
+				this.$store.state.functions.Looplottery( this, type )
 
 			}
 		}

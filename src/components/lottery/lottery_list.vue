@@ -1,18 +1,18 @@
 <template>
 	<section class="lottery_lists list-block cards-list mp0 no-padd-link">
 		<ul>
-			<li class="card" v-for="item in $store.state.now.ball">
+			<li class="card" v-for="(value, key, index) in $store.state.lotteryData.ball">
 				<div class="card-header">
-					<h4 class="m0 item-inner" @click="checkShow('items_1')"><i class="ltSub" :class="{'active':items_1}"></i>{{ item.wanfa }}</h4>
+					<h4 class="m0 item-inner" @click="checkShow('items_1')"><i class="ltSub" :class="{'active':items_1}"></i>{{ key }}  {{ ballChecked }}</h4>
 				</div>
 				<div class="card-content" v-show="items_1">
 					<section class="row">
-						<div class="col-33" v-for="itm in item.listball">
+						<div class="col-33" v-for="(itm, jndex) in value">
 							<label>
-								<input type="checkbox">
+								<input type="checkbox" checked="checked" >
 								<div class="ball_item">
-									<i :class="itm.leixin | isNum">{{ itm.leixin }}</i>
-									<strong>{{ itm.haoma }}</strong>
+									<i :class="jndex+1 | isNum">{{ jndex+1 }}</i>
+									<strong>{{ itm }}</strong>
 									<i class="icon icon-check ic_on"></i>
 								</div>
 							</label>
@@ -30,12 +30,14 @@
 		data(){
 			return {
 				items_1: true,
-				items_2: true
+				items_2: true,
+				ballChecked: []
 			}
 		},
 		methods:{
 			checkShow(attr){
 				this[attr] = !this[attr]
+				console.log( this.ballChecked )
 			}
 		},
 		filters:{

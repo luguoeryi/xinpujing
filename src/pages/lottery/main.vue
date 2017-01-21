@@ -1,7 +1,7 @@
 <template>
 	<div class="page page-current" id="lottery_main">
 
-		<v-header :headTitle="$store.state.activeLottery" lAutoClass="icon-menu" rAutoClass="icon-me" lDPanel="#side_left" rDPanel="#side_right"></v-header>
+		<v-header :headTitle="$store.state.activeLottery.name" lAutoClass="icon-menu" rAutoClass="icon-me" lDPanel="#side_left" rDPanel="#side_right"></v-header>
 		
         
 		<v-nav></v-nav>
@@ -9,7 +9,7 @@
 		<div class="content" style="overflow:hidden;">
             
             <!-- 彩种选择 -->
-			<lottery-nav :headTitle="$store.state.activeLottery" lToPopup=".modal_lottery_type" rToPopup=".modal_lottery_sub"></lottery-nav>
+			<lottery-nav :headTitle="$store.state.activeLottery.name" lToPopup=".modal_lottery_type" rToPopup=".modal_lottery_sub"></lottery-nav>
             
             <!-- 期数 -->
             <periods-l></periods-l>
@@ -41,6 +41,24 @@
     import vNav from '../../components/com/nav'
 	export default {
 		name:'LotteryMain',
-        components:{vHeader, lotteryNav, periodsL, lotteryList, lotteryType, lotterySub, lotteryBet, vNav}
+        components:{vHeader, lotteryNav, periodsL, lotteryList, lotteryType, lotterySub, lotteryBet, vNav},
+        mounted(){
+
+            let _state = this.$store.state
+            let newActive = {}
+
+            if( this.$route.query['name'] ){
+
+                newActive = this.$route.query
+
+            }else {
+
+                newActive = _state.activeLottery
+
+            }
+
+            _state.functions.Looplottery( this, newActive )
+
+        }
 	}
 </script>

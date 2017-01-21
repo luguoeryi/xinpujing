@@ -32,9 +32,9 @@ import Remit from './pages/user/Remit'
 import Drawing from './pages/user/Drawing'
 import Mtransform from './pages/user/Mtransform'
 import Record from './pages/user/Record'
-import News from './pages/user/News'
 import GameNews from './pages/user/GameNews'
 import Bankbind from './pages/user/Bankbind'
+import News from './pages/user/News'
 
 //order
 import OrderRemit from './pages/user/Order_remit'
@@ -94,7 +94,13 @@ const router = new VueRouter({
         {path:'/wap/user/drawing', name:'drawing', component:Drawing},
         {path:'/wap/user/mtransform', name:'mtransform', component:Mtransform},
         {path:'/wap/user/record', name:'record', component:Record},
-        {path:'/wap/user/news', name:'news', component:News},
+        {path:'/wap/user/news', name:'news', component:News
+            /*children:[
+                {path:'/', name:'newshot', component:News},
+                {path:'me', name:'newsme', component:NewsMe},
+                {path:'history', name:'newshistory', component:NewsHistory}
+            ]*/
+        },
         {path:'/wap/user/gamenews', name:'gamenews', component:GameNews},
 
         {path:'/wap/user/orderremit', name:'orderremit', component:OrderRemit},
