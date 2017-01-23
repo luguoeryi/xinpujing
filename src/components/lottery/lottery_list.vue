@@ -41,7 +41,7 @@
 		mounted(){
 			
 			(function(){
-				$('.card-header').on('touchend', function(){
+				$('.card-header').on('click', function(){
 					if( !$(this).attr('isShow') ){
 						$(this).find('.ltSub').removeClass('active')
 						$(this).next('.card-content').hide()
@@ -163,5 +163,6 @@
 		}
 	}
 	.card-content { padding: 0 $ball_margin $ball_margin 0; }
-	
+	.theme-dark  label .ball_item{ background: none; }
+	.theme-dark .card-header { background: #3c3c3c; border:none; }
 </style>

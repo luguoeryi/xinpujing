@@ -4,13 +4,18 @@
 
 .panel-side-nav .list-block .item-link { border-top: 1px solid transparent; font-size: 0.8rem;  span.icon{ font-size: 1.1rem; margin-right: 0.5rem; } }
 .panel-side-nav .list-block>ul:nth-of-type(2){ margin-top: 4px; }
-.page.theme-dark, .panel.theme-dark, .theme-dark .content, .theme-dark .login-screen-content, .theme-dark .page, .theme-dark .panel { background-color: $base_footer_bg; }
+.page.theme-dark, .panel.theme-dark, .theme-dark .content, .theme-dark .login-screen-content, .theme-dark .page, .theme-dark .panel { background-color: $base_footer_bg !important; }
 .panel-side-nav .list-block { margin-top: 2.2rem; }
 .theme-dark .item-link.active-state, .theme-dark label.label-checkbox.active-state, .theme-dark label.label-radio.active-state, html:not(.watch-active-state) .theme-dark .item-link:active, html:not(.watch-active-state) .theme-dark label.label-checkbox:active, html:not(.watch-active-state) .theme-dark label.label-radio:active{ background-color: $base_footer_bg; }
 label.label-checkbox input[type=checkbox]:checked+.item-media i.icon-form-checkbox, label.label-checkbox input[type=radio]:checked+.item-media i.icon-form-checkbox{ background-color: $base_top_bg; }
 .theme-dark .card { margin: 0; padding: .2rem 0; background: $side_list_bg; }
-
+.theme-dark .page > .content > section { background: none; }
+.theme-dark .game_list .link_box h4{ background-color: transparent; }
 .popup-overlay { z-index: 1999;  }
+.theme-dark .searchbar{ background:#333 !important; }
+.theme-dark .modal_bg_white.popup .bar{ background-color: #131313; }
+.theme-dark .list-block .item-text { color: inherit; }
+.theme-dark .modal_bg_white.popup{ background: #333; }
 .list-block input[type=text], .list-block input[type=password], .list-block input[type=email], .list-block input[type=tel], .list-block input[type=url], .list-block input[type=date], .list-block input[type=datetime-local], .list-block input[type=time], .list-block input[type=number], .list-block input[type=search], .list-block select, .list-block textarea{ font-size: 0.8rem; }
 .modal_side .content{ font-size: 0.75rem; .side_list{ padding-left: 0.8rem; } }
 

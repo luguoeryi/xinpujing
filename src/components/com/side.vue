@@ -71,6 +71,17 @@
                         <router-link :to="{name:'gamenews'}" class="card-content-inner item-inner"><span class="icon icons-volume-up2"></span>游戏公告</router-link>
                     </div>
                 </li>
+                <li class="card item-link"  @click="_night">
+                    <div class="card-content">
+                        <div href="#" class="card-content-inner item-inner">
+                            <span class="icon icon-clock"></span>
+                            <label class="label-switch">
+                                <input type="checkbox" v-model="night"> 
+                                <div class="checkbox"></div>
+                            </label>
+                        </div>
+                    </div>
+                </li>
             </ul>
 
             <ul style="margin-top:18px;" v-if="isLogin">
@@ -105,7 +116,8 @@
                     {name:'优惠活动', to:'/wap/activity'},
                     {name:'我的最爱', to:'/wap/mylove'},
                     {name:'最近浏览', to:'/wap/myhistory'}
-                ]
+                ],
+                night: this.$store.state.night
             }
         },
         computed:{
@@ -114,6 +126,10 @@
             }
         },
         methods:{
+            _night(){
+                this.night = !this.night
+                this.$store.state.night = this.night
+            },
             logout(){
                 this.$http.get(this.$store.state.serverURL+'logout.php').then((response) => {
           

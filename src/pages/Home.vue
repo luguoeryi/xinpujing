@@ -195,6 +195,16 @@
         @include transform(translateX(-50%));
     }
 }
+@-moz-keyframes news_float {
+    100% {
+        @include transform(translateX(-50%));
+    }
+}
+@-o-keyframes news_float {
+    100% {
+        @include transform(translateX(-50%));
+    }
+}
 
 .home_link {
     font-size: 0.7rem;

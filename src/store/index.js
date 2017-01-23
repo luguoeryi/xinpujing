@@ -47,6 +47,7 @@ const state = {
 	allMsg:0,
 	intr:0,
     username:'ceshi',
+    night:false,
 	serverURL:'http://www.hb10069.com/dist/data/',
 	yzm:'http://www.hb10069.com/dist/data/yzm.php',
 
@@ -85,7 +86,7 @@ export default new Vuex.Store({
 })
 
 state.intr = functions.GetQueryString('intr')
-
+state.night = window.localStorage.getItem('night')  == 'yes' ? true : false
 //loading
 var xhr = new XMLHttpRequest()
 xhr.onreadystatechange = function(){

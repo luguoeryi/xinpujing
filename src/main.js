@@ -118,6 +118,7 @@ const router = new VueRouter({
 
 router.afterEach(route => {
     $.closePanel()
+    //$('body').addClass('theme-dark')
 })
 
 
@@ -128,7 +129,7 @@ const vm = new Vue({
     template: `
     	<article class="page-group">
     		<transition name="fade" mode="out-in">
-                <router-view></router-view>
+                <router-view :class="$store.state.night | _night"></router-view>
     		</transition>
             <router-view name="mainSide"></router-view>
     	</article>
@@ -139,6 +140,18 @@ const vm = new Vue({
           //router.push({path:'/wap/login'});
         }
         //console.log( '实际：'+this.$store.state.isLogin )
+    },
+    filters:{
+        _night(val){
+            if( val ){
+                $('body').addClass('theme-dark')
+                window.localStorage.setItem("night", 'yes')
+            }else {
+                $('body').removeClass('theme-dark')
+                window.localStorage.removeItem("night")
+            }
+            return 
+        }
     }
 }).$mount('#app')
 

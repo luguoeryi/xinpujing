@@ -1,7 +1,7 @@
 <template>
 	<nav class="bar bar-tab base_footer">
 	    <router-link :to="{name:'reg'}" class="tab-item">
-	    	 <span class="icon icons-add-user"></span>
+	    	<span class="icon icons-add-user"></span>
 	        <span class="tab-label">立即注册</span>
 	    </router-link>	
 
@@ -33,11 +33,6 @@
 <script>
 	export default {
 		name:'Nav',
-		methods:{
-			toLogin (){
-				this.$router.push({path:'/login'});
-			}
-		},
 		computed:{
             isLogin(){
                 return this.$store.state.isLogin  ? true : false;

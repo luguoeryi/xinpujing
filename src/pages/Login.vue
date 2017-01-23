@@ -33,7 +33,7 @@
 	                            <div class="item-title label">验证码</div>
 	                            <div class="item-input yzm_wrap">
 	                                <input type="number" placeholder="请点击" pattern="\d{4}" v-model="yzm" @focus="qieYzm" >
-	                                <img @touchend="qieYzm" class="imgUrl" src="../assets/img/icon/validCode.jpg" >
+	                                <img @click="qieYzm" class="imgUrl" src="../assets/img/icon/validCode.jpg" >
 	                            </div>
 	                        </div>
 	                    </div>
@@ -41,7 +41,7 @@
 	            </ul>
 	        </div>
 	        <div class="content-padded">
-	            <a class="button button-big button-danger button-fill" href="#" @touchend="submit" >登录</a>
+	            <a class="button button-big button-danger button-fill" href="#" @click="submit" >登录</a>
 	            <p class="link_black">
 	            	<router-link :to="{name:'reg'}" class="pull-left">注册账号</router-link>
 	            	<router-link :to="{name:'forget'}" class="pull-right">忘记密码</router-link>
@@ -69,12 +69,6 @@ import vHeader from '../components/com/header.vue'
 				document.getElementsByClassName('imgUrl')[0].src = this.$store.state.yzm+'?'+Math.random()
 			},
 			submit(){
-				console.group('user')
-				console.log(this.username)
-				console.log(this.userpass)
-				console.log(this.yzm)
-				console.groupEnd('user')
-
 				if( this.username.length && this.userpass.length  && this.userpass.length ){
 
 					var formData = new FormData()
@@ -88,7 +82,7 @@ import vHeader from '../components/com/header.vue'
 						console.log( datas )
 
 						if( datas.zt == 1 ){
-
+							$.toast('登录成功')
 							this.$store.state.isLogin = datas.zt 
 							this.$store.state.money = datas.money
 							this.$store.state.username = datas.username

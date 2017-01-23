@@ -174,4 +174,6 @@
             color: #5f646e;
         }
     }
+    .theme-dark .modal_lottery_bet .bet_head { background: none; }
+    .theme-dark .modal_lottery_bet .content-padded { border: none; }
 </style>

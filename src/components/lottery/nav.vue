@@ -39,4 +39,5 @@
     		}
 		}
 	}
+	.theme-dark .lo_nav{ background: #131313; }
 </style>

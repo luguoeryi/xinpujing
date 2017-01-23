@@ -167,10 +167,6 @@
 <script>
 	import ageement from '../components/ageement'
 
-	import Vue from 'vue'
-	import vueResource from 'vue-resource'
-	Vue.use(vueResource)
-
 	export default {
 		name:'Reg',
 		components:{ageement},
@@ -244,21 +240,7 @@
 				document.getElementsByClassName('imgUrl')[0].src = this.$store.state.yzm+'?'+Math.random()
 			},
 			submit(){
-
-				console.group('user')
-					console.log(this.agentname.val)
-					console.log(this.username.val)
-					console.log(this.userpassA.val)
-					console.log(this.moneypass.val.toString().charAt(0))
-					console.log(this.moneypass.val.toString().charAt(1))
-					console.log(this.moneypass.val.toString().charAt(2))
-					console.log(this.moneypass.val.toString().charAt(3))
-					console.log(this.realname.val)
-					console.log(this.tel.val)
-					console.log(this.email.val)
-					console.log(this.qq.val)
-					console.log(this.yzm.val)
-				console.groupEnd('user')
+				console.log( this.$http.post )
 
 				this.toReg = true
 				var formData = new FormData()
@@ -276,7 +258,7 @@
 				formData.append('yzm', this.yzm.val)
 
 				for( var attr in this.$data ){
-					if( this.$data[attr]['required'] && this.$data[attr]['val'] == ''  ){
+					if( this.$data[attr]['required'] && !this.$data[attr]['val'] ){
 						$.toast('请确认'+this.$data[attr]['name'], 1000)
 						console.log( this.$data[attr]['val'] )
 						this.toReg = false
@@ -294,7 +276,7 @@
 						console.log( datas )
 
 						if( datas.zt == 1 ){
-
+							$.toast('注册成功')
 							this.$store.state.isLogin = datas.zt 
 							this.$store.state.money = datas.money
 							this.$store.state.username = datas.username

@@ -11,16 +11,16 @@
 		    <div class="list-block cards-list no-padd-link activity list_block_m card_nes">
 		        <ul>
 		            <li class="card">
-		                <div class="card-header item-link" @touchend="isShow1">
+		                <div class="card-header item-link" @click="_isShow(0)">
 		                    <a class="item-inner" href="#">
 		                        <span class="icon icons-user3 icon_ac">
 		                        </span>
 		                        下载手机APP 即送38元彩金
-		                        <span class="icon" :class="ac_1 | showCon">
+		                        <span class="icon" :class="isShow[0]['show'] | showCon">
 		                        </span>
 		                    </a>
 		                </div>
-		                <div class="card-content card-content-inner" v-show="ac_1">
+		                <div class="card-content card-content-inner" v-show="isShow[0]['show']">
 		                    <div class="item-subtitle">
 		                        2016-10-19 01:28:19
 		                    </div>
@@ -77,16 +77,16 @@
 		                </div>
 		            </li>
 		            <li class="card">
-		                <div class="card-header item-link"  @touchend="isShow2">
+		                <div class="card-header item-link"  @click="_isShow(1)">
 		                    <a class="item-inner" href="#">
 		                        <span class="icon icons-user3 icon_gray">
 		                        </span>
 		                        下载手机APP
-		                        <span class="icon" :class="ac_2 | showCon">
+		                        <span class="icon" :class="isShow[1]['show'] | showCon">
 		                        </span>
 		                    </a>
 		                </div>
-		                <div class="card-content card-content-inner" v-show="ac_2">
+		                <div class="card-content card-content-inner" v-show="isShow[1]['show']">
 		                    <div class="item-subtitle">
 		                        2016-10-19 01:28:19
 		                    </div>
@@ -143,16 +143,16 @@
 		                </div>
 		            </li>
 		            <li class="card">
-		                <div class="card-header item-link"  @touchend="isShow3">
+		                <div class="card-header item-link"  @click="_isShow(2)">
 		                    <a class="item-inner" href="#">
 		                        <span class="icon icons-user3 icon_gold">
 		                        </span>
 		                        下载手机APP 即送38元彩金
-		                        <span class="icon" :class="ac_3 | showCon">
+		                        <span class="icon" :class="isShow[2]['show'] | showCon">
 		                        </span>
 		                    </a>
 		                </div>
-		                <div class="card-content card-content-inner"  v-show="ac_3">
+		                <div class="card-content card-content-inner"  v-show="isShow[2]['show']">
 		                    <div class="item-subtitle">
 		                        2016-10-19 01:28:19
 		                    </div>
@@ -209,16 +209,16 @@
 		                </div>
 		            </li>
 		            <li class="card">
-		                <div class="card-header item-link"  @touchend="isShow4">
+		                <div class="card-header item-link"  @click="_isShow(3)">
 		                    <a class="item-inner" href="#">
 		                        <span class="icon icons-user3 icon_ac_hot">
 		                        </span>
 		                        下载手机APP 即送38元彩金
-		                        <span class="icon" :class="ac_4 | showCon">
+		                        <span class="icon" :class="isShow[3]['show'] | showCon">
 		                        </span>
 		                    </a>
 		                </div>
-		                <div class="card-content card-content-inner"  v-show="ac_4">
+		                <div class="card-content card-content-inner"  v-show="isShow[3]['show']">
 		                    <div class="item-subtitle">
 		                        2016-10-19 01:28:19
 		                    </div>
@@ -292,57 +292,24 @@
         components:{vHeader, vNav},
         data(){
         	return {
-        		ac_1:false,
-        		ac_2:false,
-        		ac_3:false,
-        		ac_4:false
+        		isShow:[
+        			{show:false},
+        			{show:false},
+        			{show:false},
+        			{show:false}
+        		]
         	}
         },
         methods:{
-        	isShow1(){
-        		this.ac_1 = !this.ac_1
-
-        		if( this.ac_1 ){
-					this.ac_2 = false
-	        		this.ac_3 = false
-	        		this.ac_4 = false
-        		}
-
-        		
-        	},
-        	isShow2(){
-        		this.ac_2 = !this.ac_2
-
-        		if( this.ac_2 ){
-					this.ac_1 = false
-	        		this.ac_3 = false
-	        		this.ac_4 = false
-        		}
-        	},
-        	isShow3(){
-				this.ac_3 = !this.ac_3
-
-				if( this.ac_3 ){
-					this.ac_1 = false
-	        		this.ac_2 = false
-	        		this.ac_4 = false
-        		}				
-        	},
-        	isShow4(){
-        		this.ac_4 = !this.ac_4
-
-        		if( this.ac_4 ){
-					this.ac_1 = false
-	        		this.ac_2 = false
-	        		this.ac_3 = false
-        		}	
+        	_isShow(val){
+        		this.isShow.map(function(item, index){
+        			if( val == index ){
+        				item.show = !item.show
+        			}else{
+        				item.show = false
+        			}
+        		})
         	}
-        },
-        mounted(){
-        	$.each($('.card-header'), function(el, index){
-        		this.set('ac_'+(index+1), 'false')
-        	})
-        	console.log( this )
         },
         filters:{
         	showCon(value){

@@ -80,3 +80,12 @@
         components:{vHeader}
 	}
 </script>
+
+<style lang="scss">
+.theme-dark { 
+    .user_center .row div, .user_center .row, .money_wrap div {
+        border: none !important;  
+    }
+    .user_head, .money_wrap { background: none !important; }
+}
+</style>
