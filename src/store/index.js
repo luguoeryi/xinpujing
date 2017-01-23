@@ -38,8 +38,9 @@ let lotteryData = {
 }
 
 
+
 const state = {
-    isLogin : 1,
+    isLogin : 0,
     agent: '',
 	money: '0.00',
 	msg:['welcome'],
@@ -47,7 +48,7 @@ const state = {
 	intr:0,
     username:'ceshi',
 	serverURL:'http://www.hb10069.com/dist/data/',
-	yzm:'http://www.hb10069.com/yzm.php',
+	yzm:'http://www.hb10069.com/dist/data/yzm.php',
 
 	//lottery
 	activeLottery: activeLottery,
@@ -64,7 +65,6 @@ const state = {
 	//function
 	functions:functions
 }
-
 
 const mutations = {
 	setLogin(state, num){
@@ -84,8 +84,7 @@ export default new Vuex.Store({
     mutations
 })
 
-//state.intr = location.search.indexof
-
+state.intr = functions.GetQueryString('intr')
 
 //loading
 var xhr = new XMLHttpRequest()
@@ -94,8 +93,8 @@ xhr.onreadystatechange = function(){
 
 		if( xhr.responseText ){
 			var loadState = JSON.parse(  xhr.responseText )
-			if( loadState.isLogin == 1 ){
-				state.isLogin = loadState.isLogin
+			if( loadState.zt == 1 ){
+				state.isLogin = loadState.zt
 				state.money = loadState.money
 				state.username = loadState.username
 			}
@@ -104,7 +103,7 @@ xhr.onreadystatechange = function(){
 				state.msg = loadState.msg
 			}
 			state.agent = loadState.agent
-			state.allMsg = loadState.num
+			state.allMsg = loadState.msg.length
 
 			console.log( loadState )
 
@@ -122,7 +121,6 @@ xhr.send()
 }, (error) => {
 	console.log( error );
 });*/
-
 
 
 

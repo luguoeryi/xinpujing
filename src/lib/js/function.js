@@ -1,3 +1,10 @@
+//search url
+function GetQueryString(name){
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}; 
+
 //倒计时
 function Countdown(oddTime, callback){
 	var Now = new Date().getTime()
@@ -49,7 +56,7 @@ function Countdown(oddTime, callback){
 function EDT_time(){
 	var _MdMsTime = new Date().getTime() - (12*60*60*1000)
 	var newTimes = new Date(_MdMsTime)
-	var  _Year = newTimes.getFullYear()  //年
+	var _Year = newTimes.getFullYear()  //年
 	var _Month = TwoNumber( newTimes.getMonth()+1 )   //月
 	var _Date = TwoNumber( newTimes.getDate() )  //日
 	var _Day = Day( newTimes.getDay() )  //星期
@@ -97,34 +104,38 @@ function TwoNumber(num){
 function getLotteryData(obj, type){
 	$.showPreloader('正在加载'+type.name+'...')
 
-	var formData = new FormData()
+	//var formData = new FormData()
 
-	formData.append('lottery', type.code)
+	//formData.append('lottery', type.code)
 
 	//console.log( type.code )
 
-    obj.$http.post(obj.$store.state.serverURL+'cplist.php', formData).then((response) => {
+    obj.$http.get(obj.$store.state.serverURL+'cplist.php?lottery='+type.code).then((response) => {
 
     	var datas = JSON.parse( response.data )
 
-    	console.log( datas )
+    	console.group( 'user' )
+    		console.log( datas )
+    	console.groupEnd( 'user' )
 
 		$.hidePreloader()
 
-		if( datas.zt == 1 && datas ){
+		if( /*datas.zt == 1 && */datas ){//zt 是否开盘
 
 			$.toast('加载成功~', 500)
 
 			obj.$store.state.activeLottery = type
 
-			obj.$store.state.lotteryData = Mxtend(datas)
+			//obj.$store.state.lotteryData = Mxtend(datas)
 
 		}else if(  datas.zt == 0 ) {
 
 			$.alert( datas.info, '封盘提示:')
 
 		}else {
+
 			$.alert( '请尽快联系客服,数据出错~~', '非常抱歉:')
+
 		}
 
 
@@ -155,7 +166,11 @@ function Looplottery( _this, Ltype ){
         _state.jiezhiTime = _state.functions.Countdown(_state.lotteryData.fenpan, function(){
 
             clearInterval(_state.touTimer)
-            console.log('封盘')
+            console.log( '封盘,当前时间为：'+new Date() )
+
+            (function(){
+            	let ballItem = $('.card') 
+            })()
         })
 
     }, 1000)
@@ -187,36 +202,14 @@ module.exports = {
 	getLotteryData:getLotteryData,
 	Countdown:Countdown,
 	Looplottery:Looplottery,
-	EDT_time:EDT_time
-}
-
-
-function Extend(opt){
-
-	if( typeof opt != 'object' ){
-		return opt
-	}
-
-	var newObj = {}
-
-	for(var attr in opt){
-
-		newObj[attr] = Extend( opt[attr] )
-
-	}
-
-	return newObj
+	EDT_time:EDT_time,
+	GetQueryString:GetQueryString
 }
 
 function Mxtend(opt){
-
 	var newObj = {}
-
 	for(var attr in opt){
-
 		newObj[attr] = opt[attr]
-
 	}
-
 	return newObj
 }

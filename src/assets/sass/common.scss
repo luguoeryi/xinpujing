@@ -12,7 +12,7 @@ label.label-checkbox input[type=checkbox]:checked+.item-media i.icon-form-checkb
 
 .popup-overlay { z-index: 1999;  }
 .list-block input[type=text], .list-block input[type=password], .list-block input[type=email], .list-block input[type=tel], .list-block input[type=url], .list-block input[type=date], .list-block input[type=datetime-local], .list-block input[type=time], .list-block input[type=number], .list-block input[type=search], .list-block select, .list-block textarea{ font-size: 0.8rem; }
-.modal_side .content{ font-size: 0.7rem; .side_list{ padding-left: 0.8rem; } }
+.modal_side .content{ font-size: 0.75rem; .side_list{ padding-left: 0.8rem; } }
 
 .panel a {
     color: inherit;
@@ -204,7 +204,7 @@ a.base_violet:active {
 .icon_ac_hot{ background-image: url("../img/icon/activity-ico1.png"); }
 .ol_wrap { padding-left: 0.8rem; }
 .list_block_m { margin: 0.4rem 0; }
-.card_nes .card-content{ display: none; }
+// .card_nes .card-content{ display: none; }
 .picker-modal{ background: $content_bg; }
 .readonly_wrap .item-input input, .readonly_wrap .item-input { color: $base_footer_color * 0.8; }
 .row .col-30 {  width: 26%; margin-left: 4%; }

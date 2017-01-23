@@ -11,16 +11,16 @@
 		    <div class="list-block cards-list no-padd-link activity list_block_m card_nes">
 		        <ul>
 		            <li class="card">
-		                <div class="card-header item-link">
+		                <div class="card-header item-link" @touchend="isShow1">
 		                    <a class="item-inner" href="#">
 		                        <span class="icon icons-user3 icon_ac">
 		                        </span>
 		                        下载手机APP 即送38元彩金
-		                        <span class="icon icon-down">
+		                        <span class="icon" :class="ac_1 | showCon">
 		                        </span>
 		                    </a>
 		                </div>
-		                <div class="card-content card-content-inner">
+		                <div class="card-content card-content-inner" v-show="ac_1">
 		                    <div class="item-subtitle">
 		                        2016-10-19 01:28:19
 		                    </div>
@@ -77,16 +77,16 @@
 		                </div>
 		            </li>
 		            <li class="card">
-		                <div class="card-header item-link">
+		                <div class="card-header item-link"  @touchend="isShow2">
 		                    <a class="item-inner" href="#">
 		                        <span class="icon icons-user3 icon_gray">
 		                        </span>
 		                        下载手机APP
-		                        <span class="icon icon-down">
+		                        <span class="icon" :class="ac_2 | showCon">
 		                        </span>
 		                    </a>
 		                </div>
-		                <div class="card-content card-content-inner">
+		                <div class="card-content card-content-inner" v-show="ac_2">
 		                    <div class="item-subtitle">
 		                        2016-10-19 01:28:19
 		                    </div>
@@ -143,16 +143,16 @@
 		                </div>
 		            </li>
 		            <li class="card">
-		                <div class="card-header item-link">
+		                <div class="card-header item-link"  @touchend="isShow3">
 		                    <a class="item-inner" href="#">
 		                        <span class="icon icons-user3 icon_gold">
 		                        </span>
 		                        下载手机APP 即送38元彩金
-		                        <span class="icon icon-down">
+		                        <span class="icon" :class="ac_3 | showCon">
 		                        </span>
 		                    </a>
 		                </div>
-		                <div class="card-content card-content-inner">
+		                <div class="card-content card-content-inner"  v-show="ac_3">
 		                    <div class="item-subtitle">
 		                        2016-10-19 01:28:19
 		                    </div>
@@ -209,16 +209,16 @@
 		                </div>
 		            </li>
 		            <li class="card">
-		                <div class="card-header item-link">
+		                <div class="card-header item-link"  @touchend="isShow4">
 		                    <a class="item-inner" href="#">
 		                        <span class="icon icons-user3 icon_ac_hot">
 		                        </span>
 		                        下载手机APP 即送38元彩金
-		                        <span class="icon icon-down">
+		                        <span class="icon" :class="ac_4 | showCon">
 		                        </span>
 		                    </a>
 		                </div>
-		                <div class="card-content card-content-inner">
+		                <div class="card-content card-content-inner"  v-show="ac_4">
 		                    <div class="item-subtitle">
 		                        2016-10-19 01:28:19
 		                    </div>
@@ -290,43 +290,64 @@
 	export default {
 		name:'Sport',
         components:{vHeader, vNav},
+        data(){
+        	return {
+        		ac_1:false,
+        		ac_2:false,
+        		ac_3:false,
+        		ac_4:false
+        	}
+        },
+        methods:{
+        	isShow1(){
+        		this.ac_1 = !this.ac_1
+
+        		if( this.ac_1 ){
+					this.ac_2 = false
+	        		this.ac_3 = false
+	        		this.ac_4 = false
+        		}
+
+        		
+        	},
+        	isShow2(){
+        		this.ac_2 = !this.ac_2
+
+        		if( this.ac_2 ){
+					this.ac_1 = false
+	        		this.ac_3 = false
+	        		this.ac_4 = false
+        		}
+        	},
+        	isShow3(){
+				this.ac_3 = !this.ac_3
+
+				if( this.ac_3 ){
+					this.ac_1 = false
+	        		this.ac_2 = false
+	        		this.ac_4 = false
+        		}				
+        	},
+        	isShow4(){
+        		this.ac_4 = !this.ac_4
+
+        		if( this.ac_4 ){
+					this.ac_1 = false
+	        		this.ac_2 = false
+	        		this.ac_3 = false
+        		}	
+        	}
+        },
         mounted(){
-        	 (function(){
-	            var thatCon = null;
-	            $('.card_nes .item-link').on('click', function(){
-	                if( $(this).attr('show') == 'yes' ){
-	                    $(this).attr('show','');
-	                    toggleClassFn($(this), false);
-	                }else {
-	                    $(this).attr('show', 'yes');
-	                    toggleClassFn($(this), true);
-	                }
-
-	                $(this).next('.card-content').show();
-	                toggleClassFn($(this), true);
-
-	                if( thatCon ){
-	                    if( $(this).parent('.card').index() == $(thatCon).parent('.card').index() && $(this).attr('show') == 'yes' ){
-	                        $(thatCon).next('.card-content').show();
-	                        toggleClassFn($(thatCon), true);
-	                    }else {
-	                        $(thatCon).next('.card-content').hide();
-	                        toggleClassFn($(thatCon), false);
-	                    }
-	                }
-	                thatCon = $(this);
-	            });
-
-	            function toggleClassFn(obj, isShow){
-	                if(isShow){
-	                    $(obj).find('span').eq(1).removeClass('icon-down');
-	                    $(obj).find('span').eq(1).addClass('icon-up');
-	                }else {
-	                    $(obj).find('span').eq(1).removeClass('icon-up');
-	                    $(obj).find('span').eq(1).addClass('icon-down');
-	                }
-	            }
-	        })();
+        	$.each($('.card-header'), function(el, index){
+        		this.set('ac_'+(index+1), 'false')
+        	})
+        	console.log( this )
+        },
+        filters:{
+        	showCon(value){
+        		return value ? 'icon-up' : 'icon-down'
+        	}
         }
 	}
 </script>

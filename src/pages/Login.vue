@@ -12,7 +12,7 @@
 	                        <div class="item-inner">
 	                            <div class="item-title label">账号</div>
 	                            <div class="item-input">
-	                                <input type="text" v-model="username">
+	                                <input type="text" v-model.trim="username">
 	                            </div>
 	                        </div>
 	                    </div>
@@ -22,7 +22,7 @@
 	                        <div class="item-inner">
 	                            <div class="item-title label">密码</div>
 	                            <div class="item-input">
-	                                <input type="password" v-model="userpass">
+	                                <input type="password" v-model.trim="userpass">
 	                            </div>
 	                        </div>
 	                    </div>
@@ -32,8 +32,8 @@
 	                        <div class="item-inner">
 	                            <div class="item-title label">验证码</div>
 	                            <div class="item-input yzm_wrap">
-	                                <input type="number" placeholder="请点击" pattern="\d{4}" v-model="yzm" @click="qieYzm" >
-	                                <img :src="yzmURL" >
+	                                <input type="number" placeholder="请点击" pattern="\d{4}" v-model="yzm" @focus="qieYzm" >
+	                                <img @touchend="qieYzm" class="imgUrl" src="../assets/img/icon/validCode.jpg" >
 	                            </div>
 	                        </div>
 	                    </div>
@@ -41,7 +41,7 @@
 	            </ul>
 	        </div>
 	        <div class="content-padded">
-	            <a class="button button-big button-danger button-fill" href="#" @click="submit" >登录</a>
+	            <a class="button button-big button-danger button-fill" href="#" @touchend="submit" >登录</a>
 	            <p class="link_black">
 	            	<router-link :to="{name:'reg'}" class="pull-left">注册账号</router-link>
 	            	<router-link :to="{name:'forget'}" class="pull-right">忘记密码</router-link>
@@ -59,7 +59,6 @@ import vHeader from '../components/com/header.vue'
 		components:{vHeader},
 		data(){
 			return {
-				yzmURL:'../assets/img/icon/validCode.jpg',
 				username: '',
 				userpass: '',
 				yzm: ''
@@ -67,7 +66,7 @@ import vHeader from '../components/com/header.vue'
 		},
 		methods:{
 			qieYzm(){
-				this.yzmURL = this.$store.state.yzm+'?'+Math.random()
+				document.getElementsByClassName('imgUrl')[0].src = this.$store.state.yzm+'?'+Math.random()
 			},
 			submit(){
 				console.group('user')
@@ -85,11 +84,8 @@ import vHeader from '../components/com/header.vue'
 
 					this.$http.post(this.$store.state.serverURL+'loginDao.php', formData).then((response) => {
 						
-						console.log( response )
 						var datas = JSON.parse( response.data )
 						console.log( datas )
-
-						
 
 						if( datas.zt == 1 ){
 
@@ -104,7 +100,7 @@ import vHeader from '../components/com/header.vue'
 
 					}, (error) => {
 	
-						$.alert('服务器错误：'+error);
+						$.alert('服务器错误: status: '+error.status)
 
 					});
 

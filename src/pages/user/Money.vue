@@ -150,7 +150,8 @@ import vHeader from '../../components/com/header.vue'
 						
 				if( response.data ){
 					var datas = JSON.parse( response.data )
-					if( datas.isLogin == 1 ){
+					console.log( datas )
+					if( datas.zt == 1 ){
 						this.allMoney = datas.total
 						this.userMoney = datas.money
 						this.agMoney = datas.ag
@@ -160,7 +161,7 @@ import vHeader from '../../components/com/header.vue'
 						this.naMoney = datas.na
 						this.ttgMoney = datas.ttg
 						this.hbMoney = datas.hb
-						this.bbMoney = datas.bbin
+						this.bbMoney = datas.bb
 						this.abMoney = datas.ab
 						this.bhLottery = datas.cp
 						this.bhPuke = datas.dx

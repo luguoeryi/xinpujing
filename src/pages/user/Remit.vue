@@ -6,10 +6,10 @@
 
 	    <div class="content">
 	        <div class="buttons-tab">
-	            <a href="#bank_online" class="tab-link button active">线上存款</a>
-	            <a href="#bank_weixin" class="tab-link button">微信支付</a>
-	            <a href="#bank_zhifubao" class="tab-link button">支付宝支付</a>
-	            <a href="#bankIs_remit" class="tab-link button">线下汇款</a>
+	            <a href="#bank_online" class="tab-link button active" @touchend="load">线上存款</a>
+	            <a href="#bank_weixin" class="tab-link button" @touchend="load">微信支付</a>
+	            <a href="#bank_zhifubao" class="tab-link button" @touchend="load">支付宝支付</a>
+	            <a href="#bankIs_remit" class="tab-link button" @touchend="load">线下汇款</a>
 	        </div>
 
 	        <div class="tabs">
@@ -268,6 +268,19 @@ import vHeader from '../../components/com/header.vue'
 	export default {
 		name:'Remit',
 		components:{vHeader},
+		data(){
+			return {
+				timers: null,
+			}
+		},
+		methods:{
+			load(){
+				clearTimeout( this.timers )
+				this.timers = setTimeout(function(){
+					$.toast('获取信息成功', 400)
+				}, 200)
+			}
+		},
 		mounted(){
 			RemitFn()
 		}

@@ -15,27 +15,11 @@
 	            <div class="tab active" id="my_news">
 	                <div class="list-block content_color">
 	                    <ul>
-	                        <li>
+	                        <li v-for="item in mymsg">
 	                            <div class="item-content open-popup" data-popup=".modal_msg_details">
 	                                <div class="item-title">
-	                                    <div class="display-box"><time class="box-flex-6">2016-08-25 02:45:27</time></div>
-	                                    <div class="info_wrap">好消息：下载APP，千万红包等你来抢！本站易记域名：744138.com 844138.com</div>
-	                                </div>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <div class="item-content">
-	                                <div class="item-title">
-	                                    <div class="display-box"><time class="box-flex-6">2016-08-25 02:45:27</time></div>
-	                                    <div class="info_wrap">好消息：下载APP，千万红包等你来抢！本站易记域名：744138.com 844138.com</div>
-	                                </div>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <div class="item-content">
-	                                <div class="item-title">
-	                                    <div class="display-box"><time class="box-flex-6">2016-08-25 02:45:27</time></div>
-	                                    <div class="info_wrap">好消息：下载APP，千万红包等你来抢！本站易记域名：744138.com 844138.com</div>
+	                                    <div class="display-box"><time class="box-flex-6">{{ item.create_date }}</time></div>
+	                                    <div class="info_wrap">{{ item.content }}</div>
 	                                </div>
 	                            </div>
 	                        </li>
@@ -45,27 +29,11 @@
 	            <div class="tab" id="newest_news">
 	                <div class="list-block content_color">
 	                    <ul>
-	                        <li>
+	                        <li v-for="item in newmsg">
 	                            <div class="item-content">
 	                                <div class="item-title">
-	                                    <div class="display-box"><time class="box-flex-6">2017-09-25 02:45:27</time></div>
-	                                    <div class="info_wrap">好消息：下载APP，我是一颗小小的石头：744138.com 844138.com</div>
-	                                </div>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <div class="item-content">
-	                                <div class="item-title">
-	                                    <div class="display-box"><time class="box-flex-6">2016-08-25 02:45:27</time></div>
-	                                    <div class="info_wrap">好消息：下载APP，千万红包等你来抢！本站易记域名：744138.com 844138.com</div>
-	                                </div>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <div class="item-content">
-	                                <div class="item-title">
-	                                    <div class="display-box"><time class="box-flex-6">2016-08-25 02:45:27</time></div>
-	                                    <div class="info_wrap">好消息：下载APP，千万红包等你来抢！本站易记域名：744138.com 844138.com</div>
+	                                    <div class="display-box"><time class="box-flex-6">{{ item.create_date }}</time></div>
+	                                    <div class="info_wrap">{{ item.content }}</div>
 	                                </div>
 	                            </div>
 	                        </li>
@@ -75,27 +43,11 @@
 	            <div class="tab" id="history_news">
 	                <div class="list-block content_color">
 	                    <ul>
-	                        <li>
+	                        <li v-for="item in historymsg">
 	                            <div class="item-content">
 	                                <div class="item-title">
-	                                    <div class="display-box"><time class="box-flex-6">2016-08-25 02:45:27</time></div>
-	                                    <div class="info_wrap">好消息：下载APP，你好，你妈好，你全家好：744138.com 844138.com</div>
-	                                </div>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <div class="item-content">
-	                                <div class="item-title">
-	                                    <div class="display-box"><time class="box-flex-6">2016-08-25 02:45:27</time></div>
-	                                    <div class="info_wrap">好消息：下载APP，千万红包等你来抢！本站易记域名：744138.com 844138.com</div>
-	                                </div>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <div class="item-content">
-	                                <div class="item-title">
-	                                    <div class="display-box"><time class="box-flex-6">2016-08-25 02:45:27</time></div>
-	                                    <div class="info_wrap">好消息：下载APP，千万红包等你来抢！本站易记域名：744138.com 844138.com</div>
+	                                    <div class="display-box"><time class="box-flex-6">{{ item.create_date }}</time></div>
+	                                    <div class="info_wrap">{{ item.content }}</div>
 	                                </div>
 	                            </div>
 	                        </li>
@@ -114,6 +66,64 @@
 import vHeader from '../../components/com/header.vue'
 	export default {
 		name:'News',
-		components:{vHeader}
+		components:{vHeader},
+		data(){
+			return {
+				newmsg:[
+					{
+						content:'hello my is newmsg',
+						create_date:'2017-01-23 16:10:02'
+					},
+					{
+						content:'hello my is newmsg',
+						create_date:'2017-01-23 16:10:02'
+					}
+				],
+				historymsg:[
+					{
+						content:'hello my is historymsg',
+						create_date:'2017-01-23 16:10:02'
+					},
+					{
+						content:'hello my is historymsg',
+						create_date:'2017-01-23 16:10:02'
+					}
+				],
+				mymsg:[
+					{
+						content:'hello my is mymsg',
+						create_date:'2017-01-23 16:10:02'
+					},
+					{
+						content:'hello my is mymsg',
+						create_date:'2017-01-23 16:10:02'
+					}
+				]
+			}
+		},
+		created(){
+
+			this.$http.get(this.$store.state.serverURL+'msg.php').then((response) => {
+
+				if( response.data ){
+					var datas = JSON.parse( response.data )
+					console.log( datas )
+					if( datas.zt == 1 ){
+						this.mymsg = datas.msg_info
+						this.newmsg = datas.nmsg
+						this.historymsg = datas.omsg
+					}else {
+						$.alert('您已退出，请重新登录',function(){
+							vm.$store.state.isLogin = 0
+							vm.$router.push({name:'login'})
+						})
+					}
+
+				}
+
+			}, (error) => {
+				$.alert('服务器错误'+error.status);
+			});
+		}
 	}
 </script>

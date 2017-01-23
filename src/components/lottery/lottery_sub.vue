@@ -8,8 +8,8 @@
         <div class="content">
             <div class="list-block">
                 <ul>
-                    <li class="item-content" v-for="item in type">
-                        <div class="item-inner">{{ item }}</div>
+                    <li class="item-content" v-for="(value, key) in $store.state.lotteryData.ball">
+                        <div class="item-inner">{{ key }}</div>
                     </li>
                 </ul>
             </div>
@@ -20,16 +20,6 @@
 
 <script>
 	export default {
-		name: 'lotterySub',
-		data(){
-			return {
-				type:[
-					'珠仔',
-					'总和龙虎',
-					'组合',
-					'斗牛'
-				]
-			}
-		}
+		name: 'lotterySub'
 	}
 </script>

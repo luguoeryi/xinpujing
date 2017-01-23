@@ -118,18 +118,18 @@
                 this.$http.get(this.$store.state.serverURL+'logout.php').then((response) => {
           
                     var datas = JSON.parse( response.data )
-
-                    if( datas == 1 ){
+                    console.log(datas)
+                    if( datas.out == 1 ){
                         this.$store.state.isLogin = 0
                         $.closePanel()
-                        $.alert('退出成功')
+                        $.toast("退出成功")
                     }else {
-                        $.alert('退出失败')
+                        $.toast("退出失败")
                     }
 
                 }, (error) => {
-                    console.log( error )
-                    $.alert('服务器错误：'+error)
+                   
+                    $.alert('服务器错误: status: '+error.status)
 
                 });
             }

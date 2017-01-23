@@ -3,13 +3,13 @@
 		<ul>
 			<li class="card" v-for="(value, key, index) in $store.state.lotteryData.ball">
 				<div class="card-header">
-					<h4 class="m0 item-inner" @click="checkShow('items_1')"><i class="ltSub" :class="{'active':items_1}"></i>{{ key }}  {{ ballChecked }}</h4>
+					<h4 class="m0 item-inner ball-types"><i class="ltSub active"></i>{{ key }}</h4>
 				</div>
-				<div class="card-content" v-show="items_1">
+				<div class="card-content">
 					<section class="row">
 						<div class="col-33" v-for="(itm, jndex) in value">
 							<label>
-								<input type="checkbox" checked="checked" >
+								<input type="checkbox" :name="'ball_'+index+'_'+jndex" >
 								<div class="ball_item">
 									<i :class="jndex+1 | isNum">{{ jndex+1 }}</i>
 									<strong>{{ itm }}</strong>
@@ -27,23 +27,32 @@
 <script>
 	export default {
 		name:'Lotterylist',
-		data(){
-			return {
-				items_1: true,
-				items_2: true,
-				ballChecked: []
-			}
-		},
 		methods:{
-			checkShow(attr){
+			/*checkShow(attr){
 				this[attr] = !this[attr]
 				console.log( this.ballChecked )
-			}
+			}*/
 		},
 		filters:{
 			isNum(value){
 				return typeof value == 'number'  ||  !isNaN( Number(value) )  ?  'blueball-sm blueBs'+value : '';
 			}
+		},
+		mounted(){
+			
+			(function(){
+				$('.card-header').on('touchend', function(){
+					if( !$(this).attr('isShow') ){
+						$(this).find('.ltSub').removeClass('active')
+						$(this).next('.card-content').hide()
+						$(this).attr('isShow', 'true')
+					}else {
+						$(this).find('.ltSub').addClass('active')
+						$(this).next('.card-content').show()
+						$(this).attr('isShow', '')
+					}
+				})
+			})()
 		}
 	}
 </script>
