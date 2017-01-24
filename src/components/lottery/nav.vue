@@ -40,4 +40,5 @@
 		}
 	}
 	.theme-dark .lo_nav{ background: #131313; }
+	.theme-dark .lo_nav div:nth-of-type(2){ border-color: transparent; }
 </style>

@@ -70,18 +70,18 @@
                         </a>
                     </div>
                     <div class="box-flex-3">
-                        <a class="link_box" href="#">
+                        <router-link :to="{name:'lottery'}" class="link_box">
                             <img src="../assets/img/menu/c1img_hgty.png" alt="" />
                             <span>皇冠体育</span>
-                        </a>
+                        </router-link>
                     </div>
                 </div>
                 <div class="display-box">
                     <div class="box-flex-3">
-                        <a class="link_box" href="#">
+                        <router-link :to="{name:'lottery'}" class="link_box">
                             <img src="../assets/img/menu/index_ogsx.png" alt="" />
                             <span>彩票游戏</span>
-                        </a>
+                        </router-link>
                     </div>
                     <div class="box-flex-3">
                         <a class="link_box" href="#">
@@ -96,18 +96,18 @@
                         </a>
                     </div>
                     <div class="box-flex-3">
-                        <a class="link_box" href="#">
+                        <router-link :to="{name:'sport'}" class="link_box" href="#">
                             <img src="../assets/img/menu/c1imgnmg.png" alt="" />
                             <span>皇冠体育</span>
-                        </a>
+                        </router-link>
                     </div>
                 </div>
                 <div class="display-box">
                     <div class="box-flex-3">
-                        <a class="link_box" href="#">
+                        <router-link :to="{name:'lottery'}" class="link_box">
                             <img src="../assets/img/menu/index_pt.png" alt="" />
                             <span>彩票游戏</span>
-                        </a>
+                        </router-link>
                     </div>
                     <div class="box-flex-3">
                         <a class="link_box" href="#">

@@ -19,7 +19,7 @@
 	        <span class="icon icons-credit-card3"></span>
 	        <span class="tab-label">线上存款</span>
 	    </router-link>
-	    <router-link :to="{name:'forget'}" class="tab-item" v-else>
+	    <router-link :to="{name:'forgetw'}" class="tab-item" v-else>
 	        <span class="icon icons-question-circle-o"></span>
 	        <span class="tab-label">忘记密码</span>
 	    </router-link>

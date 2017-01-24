@@ -16,6 +16,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Reg from './pages/Reg'
 import Forget from './pages/Forget'
+import Forgetw from './pages/Forgetw'
 import Lottery from './pages/Lottery'
 import Game from './pages/Game'
 import Sport from './pages/Sport'
@@ -44,7 +45,7 @@ import OrderRemit from './pages/user/Order_remit'
 import vSide from './components/com/side'
 
 //404
-import is404 from './components/Hello'
+import is404 from './pages/page404'
 
 const router = new VueRouter({
 	mode:'history',
@@ -58,9 +59,10 @@ const router = new VueRouter({
             default:Home,
             mainSide:vSide
         }},
-        {path:'/wap/login', name:'login', component:Login},
+        {path:'/wap/login', name:'login', datas:{login:true}, component:Login},
         {path:'/wap/reg', name:'reg', component:Reg},
         {path:'/wap/forget', name:'forget', component:Forget},
+        {path:'/wap/forgetw', name:'forgetw', component:Forgetw},
         {path:'/wap/lottery', name:'lottery', components:{
             default:Lottery,
             mainSide:vSide
@@ -109,16 +111,16 @@ const router = new VueRouter({
 	]
 })
 
-/*router.beforeEach((to, from, next) => {
-    console.log({
-        'to':to, 'from':from, 'next':next
-    });
-    next();
-})*/
-
-router.afterEach(route => {
+router.beforeEach((to, from, next) => {
     $.closePanel()
-    //$('body').addClass('theme-dark')
+    store.state.loginPage.map(function(item){
+        if( to.name == item.name && !vm.$store.state.isLogin){   //路由切换包含白名单自动跳到登录页
+            $.toast('您尚未登录', 500)
+            next({name:'login'})
+            return 
+        }
+    })
+    next()
 })
 
 
@@ -135,19 +137,17 @@ const vm = new Vue({
     	</article>
     `,
     beforeCreate (){
-        //console.log(router)
         if( this.$store.state.isLogin != 1 ){
           //router.push({path:'/wap/login'});
         }
-        //console.log( '实际：'+this.$store.state.isLogin )
     },
     filters:{
         _night(val){
-            if( val ){
+            if( val ){   //夜间模式   --  日间模式
                 $('body').addClass('theme-dark')
-                window.localStorage.setItem("night", 'yes')
+                window.localStorage.setItem("night", 'yes') 
             }else {
-                $('body').removeClass('theme-dark')
+                $('body').removeClass('theme-dark') 
                 window.localStorage.removeItem("night")
             }
             return 

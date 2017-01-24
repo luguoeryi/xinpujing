@@ -27,12 +27,6 @@
 <script>
 	export default {
 		name:'Lotterylist',
-		methods:{
-			/*checkShow(attr){
-				this[attr] = !this[attr]
-				console.log( this.ballChecked )
-			}*/
-		},
 		filters:{
 			isNum(value){
 				return typeof value == 'number'  ||  !isNaN( Number(value) )  ?  'blueball-sm blueBs'+value : '';

@@ -110,7 +110,7 @@ function getLotteryData(obj, type){
 
 	//console.log( type.code )
 
-    obj.$http.get(obj.$store.state.serverURL+'cplist.php?lottery='+type.code).then((response) => {
+    obj.$http.get(obj.$store.state.serverURL+'a.php?lottery='+type.code).then((response) => {//cplist
 
     	var datas = JSON.parse( response.data )
 
@@ -126,16 +126,15 @@ function getLotteryData(obj, type){
 
 			obj.$store.state.activeLottery = type
 
-			//obj.$store.state.lotteryData = Mxtend(datas)
-
+			obj.$store.state.lotteryData = Mxtend(datas)
 		}else if(  datas.zt == 0 ) {
 
-			$.alert( datas.info, '封盘提示:')
+			$.toast(datas.info, 500)
+
 
 		}else {
-
+			clearTimeout(obj.$store.state.kaiTimer)
 			$.alert( '请尽快联系客服,数据出错~~', '非常抱歉:')
-
 		}
 
 
@@ -143,6 +142,8 @@ function getLotteryData(obj, type){
     }, (error) => {
 
     	//console.log( error )
+
+    	clearTimeout(obj.$store.state.kaiTimer)
 
     	$.hidePreloader()
 

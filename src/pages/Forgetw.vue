@@ -1,18 +1,17 @@
 <template>
 	<!-- forget password -->
 	<div class="page page-current modal_forget_pass modal_base modal_form_li">
-	    <v-header headTitle="修改密码" lAutoClass="icon-left" rAutoClass="icons-home2"  lToName="back" rToName="home"></v-header>
+	    <v-header headTitle="忘记密码" lAutoClass="icon-left" rAutoClass="icons-home2"  lToName="back" rToName="home"></v-header>
 
 	    <div class="content">
-
-	         <div class="list-block" style="margin-top:0;margin-bottom:10px;">
+	        <div class="list-block" style="margin-top:0;margin-bottom:10px;">
 	            <ul>
 	                <li>
 	                    <div class="item-content">
 	                        <div class="item-inner">
-	                            <div class="item-title label">原密码</div>
+	                            <div class="item-title label">会员账号</div>
 	                            <div class="item-input">
-	                                <input type="password" v-model.trim="oddPass">
+	                                <input type="text" v-model.trim="username">
 	                            </div>
 	                        </div>
 	                    </div>
@@ -20,9 +19,9 @@
 	                <li>
 	                    <div class="item-content">
 	                        <div class="item-inner">
-	                            <div class="item-title label">新密码</div>
+	                            <div class="item-title label">真实姓名</div>
 	                            <div class="item-input">
-	                                <input type="password" v-model.trim="newPass">
+	                                <input type="text" v-model.trim="realname">
 	                            </div>
 	                        </div>
 	                    </div>
@@ -30,9 +29,9 @@
 	                <li>
 	                    <div class="item-content">
 	                        <div class="item-inner">
-	                            <div class="item-title label">确认密码</div>
+	                            <div class="item-title label">取款密码</div>
 	                            <div class="item-input">
-	                                <input type="password" v-model.trim="newPassto">
+	                                <input type="password" v-model.trim="moneypass">
 	                            </div>
 	                        </div>
 	                    </div>
@@ -66,9 +65,9 @@ import vHeader from '../components/com/header.vue'
 		components:{vHeader},
 		data(){
 			return {
-				oddPass:'',
-				newPass:'',
-				newPassto: '',
+				username:'',
+				realname:'',
+				moneypass:'',
 				yzm: ''
 			}
 		},
@@ -77,37 +76,51 @@ import vHeader from '../components/com/header.vue'
 				document.getElementsByClassName('imgUrl')[0].src = this.$store.state.yzm+'?'+Math.random()
 			},
 			resetPass(){
-				if( this.oddPass.length &&  this.newPass.length && this.newPassto.length && this.yzm ){
+				if( this.username.length &&  this.realname.length && this.moneypass.length && this.yzm ){
+
 
 					var formData = new FormData()
-					formData.append('opwd', this.oddPass)
-					formData.append('npwd', this.newPass)
+					formData.append('username', this.username)
+					formData.append('realname', this.realname)
+					formData.append('pwd1', this.moneypass.toString().charAt(0))
+					formData.append('pwd2', this.moneypass.toString().charAt(1))
+					formData.append('pwd3', this.moneypass.toString().charAt(2))
+					formData.append('pwd4', this.moneypass.toString().charAt(3))
 					formData.append('yzm', this.yzm)
-
-					this.$http.post(this.$store.state.serverURL+'pwd.php', formData).then((response) => {
+					
+					this.$http.post(this.$store.state.serverURL+'forget.php', formData).then((response) => {
 				
 						if( response.data ){
+
 							var datas = JSON.parse( response.data )
+							console.log( datas )
 
-							if( datas.zt == 1 ){
+							/*
+								check: 1    表示后台密码重置成功
+								zt: 1     表示已为用户自动登录 
+								pwd: 0000   为返回的重置密码
+							*/
 
-								if( datas.check == 1 ){
-									$.toast('修改成功，请重新登录', 500)
-									vm.$store.state.isLogin = 0
-									vm.$router.push({name:'login'})
-								}else {
-									$.toast(datas.info, 500)
-								}
+							if( datas.check == 1 && datas.zt==1 ){
+
+								$.alert('已将您的密码重置为<b class="base_red">'+datas.pwd+'</b>请前往会员中心修改密码', '信息匹配成功', function(){
+									vm.$store.state.isLogin = 1
+									vm.$router.push({name:'forget'})
+								})
+
 							}else {
-								$.toast('您已退出，请重新登录', 500)
-								vm.$store.state.isLogin = 0
-								vm.$router.push({name:'login'})
+
+								//如果失败只需要返回 check=0 即可
+								$.toast('信息匹配失败', 500)
+
 							}
 
 						}
 
 					}, (error) => {
+
 						$.toast('服务器错误: status: '+error.status, 500)
+
 					});
 
 				}else {

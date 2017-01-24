@@ -44,7 +44,7 @@
 	            <a class="button button-big button-danger button-fill" href="#" @click="submit" >登录</a>
 	            <p class="link_black">
 	            	<router-link :to="{name:'reg'}" class="pull-left">注册账号</router-link>
-	            	<router-link :to="{name:'forget'}" class="pull-right">忘记密码</router-link>
+	            	<router-link :to="{name:'forgetw'}" class="pull-right">忘记密码</router-link>
 	            </p>
 	        </div>
 	    </div>
@@ -54,6 +54,8 @@
 
 <script>
 import vHeader from '../components/com/header.vue'
+
+
 	export default {
 		name:'Login',
 		components:{vHeader},
@@ -69,6 +71,7 @@ import vHeader from '../components/com/header.vue'
 				document.getElementsByClassName('imgUrl')[0].src = this.$store.state.yzm+'?'+Math.random()
 			},
 			submit(){
+
 				if( this.username.length && this.userpass.length  && this.userpass.length ){
 
 					var formData = new FormData()
@@ -82,25 +85,25 @@ import vHeader from '../components/com/header.vue'
 						console.log( datas )
 
 						if( datas.zt == 1 ){
-							$.toast('登录成功')
+							$.toast('登录成功', 500)
 							this.$store.state.isLogin = datas.zt 
 							this.$store.state.money = datas.money
 							this.$store.state.username = datas.username
 							this.$router.push({name:'home'})
 
 						}else {
-							$.alert(datas.info)
+							$.toast(datas.info, 500)
 						}
 
 					}, (error) => {
-	
-						$.alert('服务器错误: status: '+error.status)
+
+						$.toast('服务器错误: status: '+error.status, 500)
 
 					});
 
 				}else {
 
-					$.alert('请完善登录信息');
+					$.toast('请完善登录信息', 500)
 
 				}
 				

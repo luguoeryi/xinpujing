@@ -49,31 +49,31 @@
                 <li class="card item-link">
                     
                     <div class="card-content">
-                        <router-link :to="{name:'user'}" class="card-content-inner item-inner">
+                        <router-link :to="{name:'user'}" tag="div" class="card-content-inner item-inner">
                             <span class="icon icons-user3"></span>我的账户
                         </router-link>
                     </div>
                 </li>
                 <li class="card item-link">
                     <div class="card-content">
-                        <router-link :to="{name:'record'}" class="card-content-inner item-inner"><span class="icon icons-news"></span>交易记录</router-link>
+                        <router-link :to="{name:'record'}" tag="div" class="card-content-inner item-inner"><span class="icon icons-news"></span>交易记录</router-link>
                     </div>
                 </li>
             </ul>
             <ul style="margin-top:18px;">
                 <li class="card item-link">
                     <div class="card-content">
-                        <router-link :to="{name:'news'}" class="card-content-inner item-inner"><span class="icon icons-talk"></span>最新消息</router-link>
+                        <router-link :to="{name:'news'}" tag="div" class="card-content-inner item-inner"><span class="icon icons-talk"></span>最新消息</router-link>
                     </div>
                 </li>
                 <li class="card item-link">
                     <div class="card-content">
-                        <router-link :to="{name:'gamenews'}" class="card-content-inner item-inner"><span class="icon icons-volume-up2"></span>游戏公告</router-link>
+                        <router-link :to="{name:'gamenews'}" tag="div" class="card-content-inner item-inner"><span class="icon icons-volume-up2"></span>游戏公告</router-link>
                     </div>
                 </li>
                 <li class="card item-link"  @click="_night">
                     <div class="card-content">
-                        <div href="#" class="card-content-inner item-inner">
+                        <div class="card-content-inner item-inner">
                             <span class="icon icon-clock"></span>
                             <label class="label-switch">
                                 <input type="checkbox" v-model="night"> 
@@ -87,7 +87,7 @@
             <ul style="margin-top:18px;" v-if="isLogin">
                 <li class="card item-link">
                     <div class="card-content">
-                        <a href="#" class="card-content-inner item-inner" @click="logout"><span class="icon icons-volume-up2"></span>退出</a> <!-- @click="$store.commit('setLogin', 0)" -->
+                        <a href="#" class="card-content-inner item-inner" @click="logout"><span class="icon icons-log-out"></span>退出</a> <!-- @click="$store.commit('setLogin', 0)" -->
                     </div>
                 </li>
             </ul>
@@ -129,6 +129,12 @@
             _night(){
                 this.night = !this.night
                 this.$store.state.night = this.night
+                if( this.night ){
+                    $.toast('已为您开启夜间模式')
+                }else {
+                    $.toast('当前是日间模式')
+                }
+                $.closePanel()
             },
             logout(){
                 this.$http.get(this.$store.state.serverURL+'logout.php').then((response) => {

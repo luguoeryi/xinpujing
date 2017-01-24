@@ -60,7 +60,7 @@
 		                        <div class="item-media"><i class="icon icon-form-email base_red">*</i></div>
 		                        <div class="item-inner">
 		                            <div class="item-title label">取款密码</div>
-		                            <div class="item-input"><input type="password" pattern="\d{4}" placeholder="请输入4位取款密码，纯数字" maxlength="12" v-model="moneypass.val"></div>
+		                            <div class="item-input"><input type="password" pattern="\d{4}" placeholder="请输入4位取款密码，纯数字" maxlength="4" v-model="moneypass.val"></div>
 		                        </div>
 		                    </div>
 		                </li>
@@ -150,7 +150,7 @@
 		            </ul>
 		        </div>
 		        <div class="content-padded">
-					<small class="text-right">温馨提示：标了<strong class="base_red">*</strong>为必填</small>	
+					<small class="text-right">温馨提示：<strong class="base_red">*</strong>为必填,请牢记您的用户信息</small>	
 		            <p><a href="#" class="button button-big button-fill button-danger" @touchend="submit">确定</a></p>
 		        </div>
 		    </div>
@@ -240,7 +240,8 @@
 				document.getElementsByClassName('imgUrl')[0].src = this.$store.state.yzm+'?'+Math.random()
 			},
 			submit(){
-				console.log( this.$http.post )
+
+				if( isNaN(Number(this.moneypass.val)) ){ this.moneypass.val = '' }
 
 				this.toReg = true
 				var formData = new FormData()
@@ -258,9 +259,8 @@
 				formData.append('yzm', this.yzm.val)
 
 				for( var attr in this.$data ){
-					if( this.$data[attr]['required'] && !this.$data[attr]['val'] ){
+					if( (this.$data[attr]['required'] && !this.$data[attr]['val']) ){
 						$.toast('请确认'+this.$data[attr]['name'], 1000)
-						console.log( this.$data[attr]['val'] )
 						this.toReg = false
 						break;
 					}
@@ -276,7 +276,7 @@
 						console.log( datas )
 
 						if( datas.zt == 1 ){
-							$.toast('注册成功')
+							$.toast('注册成功', 500)
 							this.$store.state.isLogin = datas.zt 
 							this.$store.state.money = datas.money
 							this.$store.state.username = datas.username
@@ -284,13 +284,13 @@
 							this.$store.state.isLogin = 1
 
 						}else {
-							$.alert(datas.info)
+							$.toast(datas.info, 500)
 						}
 
 
 					}, (error) => {
 
-						$.alert('服务器错误: status: '+error.status)
+						$.toast('服务器错误: status: '+error.status, 500)
 
 					});
 				}

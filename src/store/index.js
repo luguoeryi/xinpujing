@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import VueResource from 'vue-resource'
 import functions from '../lib/js/function'
+Vue.use(VueResource)
 Vue.use(Vuex)
 
 let normalLottery = [
@@ -64,7 +66,22 @@ const state = {
 	kaiTimer:null,
 
 	//function
-	functions:functions
+	functions:functions,
+
+	//login -- page
+	loginPage:[
+		{name:'user'},
+		{name:'money'},
+		{name:'remit'},
+		{name:'bankbind'},
+		{name:'drawing'},
+		{name:'mtransform'},
+		{name:'record'},
+		{name:'news'},
+		{name:'gamenews'},
+		{name:'orderremit'},
+		{name:'forget'}
+	]
 }
 
 const mutations = {

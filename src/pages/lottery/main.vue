@@ -57,7 +57,7 @@
 
             }
 
-           // _state.functions.Looplottery( this, {name:'重庆时时彩', code:'cq'} )
+           // _state.functions.Looplottery( this, newActive )  //初始化彩票数据
 
         }
 	}

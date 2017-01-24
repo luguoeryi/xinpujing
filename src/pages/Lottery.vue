@@ -75,16 +75,16 @@
                         </a>
                     </div>
                     <div class="box-flex-3">
-                        <a class="link_box" href="#">
+                       <router-link :to="{name:'lotterym', query:{code:'kl8'}}" class="link_box">
                             <img src="../assets/img/menu/c2img_k8_bj.png" alt="">
                             <span>北京快乐8</span>
-                        </a>
+                        </router-link>
                     </div>
                     <div class="box-flex-3">
-                        <a class="link_box" href="#">
+                        <router-link :to="{name:'lotterym', query:{code:'gdsf'}}" class="link_box">
                             <img src="../assets/img/menu//c2img_11-5_gd.png" alt="">
                             <span>广东11选5</span>
-                        </a>
+                        </router-link>
                     </div>
                 </div>
                 <div class="display-box">
