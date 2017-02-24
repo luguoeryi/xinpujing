@@ -2,10 +2,10 @@
 	<section class="lottery_lists list-block cards-list mp0 no-padd-link">
 		<ul>
 			<li class="card" v-for="(value, key, index) in $store.state.lotteryData.ball">
-				<div class="card-header">
-					<h4 class="m0 item-inner ball-types"><i class="ltSub active"></i>{{ key }}</h4>
+				<div class="card-header" @click="fun(index)">
+					<h4 class="m0 item-inner ball-types"><i :class="{active:objs[index], ltSub: true}"></i>{{ key }}</h4>
 				</div>
-				<div class="card-content">
+				<div class="card-content" v-show="objs[index]">
 					<section class="row">
 						<div class="col-33" v-for="(itm, jndex) in value">
 							<label>
@@ -20,6 +20,7 @@
 					</section>
 				</div>
 			</li>
+			
 		</ul>
 	</section>
 </template>
@@ -27,26 +28,25 @@
 <script>
 	export default {
 		name:'Lotterylist',
+		data(){
+			return {
+				objs:[true, true]
+			}
+		},
+		// watch: {
+        //   objs(val,olval) {
+		// 	  alert(1)
+		//   }
+		// },
 		filters:{
 			isNum(value){
 				return typeof value == 'number'  ||  !isNaN( Number(value) )  ?  'blueball-sm blueBs'+value : '';
 			}
 		},
-		mounted(){
-			
-			(function(){
-				$('.card-header').on('click', function(){
-					if( !$(this).attr('isShow') ){
-						$(this).find('.ltSub').removeClass('active')
-						$(this).next('.card-content').hide()
-						$(this).attr('isShow', 'true')
-					}else {
-						$(this).find('.ltSub').addClass('active')
-						$(this).next('.card-content').show()
-						$(this).attr('isShow', '')
-					}
-				})
-			})()
+		methods: {
+			fun: function(index) {
+				this.$set(this.objs,index, !this.objs[index])
+			}
 		}
 	}
 </script>

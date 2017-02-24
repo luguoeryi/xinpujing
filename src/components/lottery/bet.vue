@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <section class="text-center">
 
                 <div class="content-padded">
@@ -103,9 +103,9 @@
                 </div>
             </section>
 
-            
-                
-            
+
+
+
         </div>
     </div>
     <!-- ! end modal_lottery_bet -->
