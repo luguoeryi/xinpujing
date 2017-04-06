@@ -30,6 +30,9 @@ let lotteryData = {
         ],
         仟定位:[
             '9.80','9.80','9.80','9.80','9.80','9.80','9.80','9.80','9.80'
+        ],
+		佰定位:[
+            '9.80','9.80','9.80','9.80','9.80','9.80','9.80','9.80','9.80'
         ]
     },
     fenpan:'2017-01-21 10:09:00',
@@ -45,7 +48,7 @@ const state = {
     isLogin : 0,
     agent: '',
 	money: '0.00',
-	msg:['welcome'],
+	msg:['尊敬的用户欢迎来到新葡京电玩城', '即日起"彩金特惠活动"正式启动！'],
 	allMsg:0,
 	intr:0,
     username:'ceshi',
@@ -96,12 +99,6 @@ const mutations = {
 	}  
 }
 
-
-export default new Vuex.Store({
-    state,
-    mutations
-})
-
 state.intr = functions.GetQueryString('intr')
 state.night = window.localStorage.getItem('night')  == 'yes' ? true : false
 //loading
@@ -124,14 +121,12 @@ xhr.onreadystatechange = function(){
 			state.allMsg = loadState.msg.length
 
 			console.log( loadState )
-
-			//console.log( state )
 		}
 		
 	}
 }
-xhr.open('GET', state.serverURL+'top.php?intr='+state.intr, false)  //同步获取
-xhr.send()
+//xhr.open('GET', state.serverURL+'top.php?intr='+state.intr, false)  //同步获取
+//xhr.send()
 
 /*Vue.http.post('http://127.0.0.1:1029/data/login.php').then((response) => {
 	state.isLogin = response.data
@@ -139,6 +134,12 @@ xhr.send()
 }, (error) => {
 	console.log( error );
 });*/
+
+
+export default new Vuex.Store({
+    state,
+    mutations
+})
 
 
 

@@ -1,5 +1,63 @@
 @import "var", "mixin", "font";
 
+/* transition  */
+/* .fade-enter-active {
+    transition: all .3s ease;
+}
+.fade-leave-active {
+    transition: all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.fade-enter, .fade-leave-active {
+    transform: translateX(6%);
+}  */
+
+.fadeIn-enter-active {
+  transition: all .3s ease;
+}
+
+.fadeIn-leave-active {
+  //transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.fadeIn-enter, .fadeIn-leave-active {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.fadeOut-enter-active {
+    transition: all .3s ease;
+}
+
+.fadeOut-leave-active {
+    //transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.fadeOut-enter, .fadeOut-leave-active {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+
+// .fade-enter {
+//     transform: translateX(100%);
+//     transition: .3s ease;
+// }
+// .fade-enter-active {
+//     transform: translateX(0);
+//     transition: .3s ease;
+// }
+// .fade-leave {
+//     transform: translateX(0);
+//     transition: .3s ease;
+// }
+// .fade-leave-active {
+//     transform: translateX(-100%);
+//     transition: .3s ease;
+// }
+
+
+/* ! end transition */
+
 /* reset sui */
 
 .panel-side-nav .list-block .item-link { border-top: 1px solid transparent; font-size: 0.8rem;  span.icon{ font-size: 1.1rem; margin-right: 0.5rem; } }

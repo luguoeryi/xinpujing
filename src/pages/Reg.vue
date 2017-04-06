@@ -1,5 +1,4 @@
 <template>
-	<div>
 		<!-- reg -->
 		<div class="page page-current modal_reg modal_base modal_form_li" id="page_reg">
 
@@ -154,13 +153,10 @@
 		            <p><a href="#" class="button button-big button-fill button-danger" @touchend="submit">确定</a></p>
 		        </div>
 		    </div>
+			
+			<ageement></ageement>
 		</div>
 		<!-- ! end reg -->
-		
-		<ageement></ageement>
-
-	</div>
-	
 
 </template>
 
